@@ -1,0 +1,15 @@
+C:\Users\dev7\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Data\bin\Debug\net5.0\Ticket.Data.deps.json
+C:\Users\dev7\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Data\bin\Debug\net5.0\Ticket.Data.runtimeconfig.json
+C:\Users\dev7\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Data\bin\Debug\net5.0\Ticket.Data.runtimeconfig.dev.json
+C:\Users\dev7\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Data\bin\Debug\net5.0\Ticket.Data.dll
+C:\Users\dev7\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Data\bin\Debug\net5.0\ref\Ticket.Data.dll
+C:\Users\dev7\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Data\bin\Debug\net5.0\Ticket.Data.pdb
+C:\Users\dev7\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Data\obj\Debug\net5.0\Ticket.Data.csproj.AssemblyReference.cache
+C:\Users\dev7\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Data\obj\Debug\net5.0\Ticket.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dev7\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Data\obj\Debug\net5.0\Ticket.Data.AssemblyInfoInputs.cache
+C:\Users\dev7\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Data\obj\Debug\net5.0\Ticket.Data.AssemblyInfo.cs
+C:\Users\dev7\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Data\obj\Debug\net5.0\Ticket.Data.csproj.CoreCompileInputs.cache
+C:\Users\dev7\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Data\obj\Debug\net5.0\Ticket.Data.dll
+C:\Users\dev7\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Data\obj\Debug\net5.0\ref\Ticket.Data.dll
+C:\Users\dev7\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Data\obj\Debug\net5.0\Ticket.Data.pdb
+C:\Users\dev7\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Data\obj\Debug\net5.0\Ticket.Data.genruntimeconfig.cache

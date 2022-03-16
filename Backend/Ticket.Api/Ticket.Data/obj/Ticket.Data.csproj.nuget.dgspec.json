@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pouya\\OneDrive\\Desktop\\Ticketing_App\\Backend\\Ticket.Api\\Ticket.Data\\Ticket.Data.csproj": {}
+    "C:\\Users\\dev7\\Desktop\\Ticketing_App\\Backend\\Ticket.Api\\Ticket.Data\\Ticket.Data.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pouya\\OneDrive\\Desktop\\Ticketing_App\\Backend\\Ticket.Api\\Ticket.Data\\Ticket.Data.csproj": {
+    "C:\\Users\\dev7\\Desktop\\Ticketing_App\\Backend\\Ticket.Api\\Ticket.Data\\Ticket.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pouya\\OneDrive\\Desktop\\Ticketing_App\\Backend\\Ticket.Api\\Ticket.Data\\Ticket.Data.csproj",
+        "projectUniqueName": "C:\\Users\\dev7\\Desktop\\Ticketing_App\\Backend\\Ticket.Api\\Ticket.Data\\Ticket.Data.csproj",
         "projectName": "Ticket.Data",
-        "projectPath": "C:\\Users\\pouya\\OneDrive\\Desktop\\Ticketing_App\\Backend\\Ticket.Api\\Ticket.Data\\Ticket.Data.csproj",
-        "packagesPath": "C:\\Users\\pouya\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pouya\\OneDrive\\Desktop\\Ticketing_App\\Backend\\Ticket.Api\\Ticket.Data\\obj\\",
+        "projectPath": "C:\\Users\\dev7\\Desktop\\Ticketing_App\\Backend\\Ticket.Api\\Ticket.Data\\Ticket.Data.csproj",
+        "packagesPath": "C:\\Users\\dev7\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dev7\\Desktop\\Ticketing_App\\Backend\\Ticket.Api\\Ticket.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\pouya\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dev7\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -42,6 +42,32 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[5.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.14, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -57,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
         }
       }
     }
