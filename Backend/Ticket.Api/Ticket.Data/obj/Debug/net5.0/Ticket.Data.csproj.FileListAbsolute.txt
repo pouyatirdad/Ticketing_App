@@ -1,0 +1,15 @@
+C:\Users\pouya\OneDrive\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Data\bin\Debug\net5.0\Ticket.Data.deps.json
+C:\Users\pouya\OneDrive\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Data\bin\Debug\net5.0\Ticket.Data.dll
+C:\Users\pouya\OneDrive\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Data\bin\Debug\net5.0\Ticket.Data.pdb
+C:\Users\pouya\OneDrive\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Data\obj\Debug\net5.0\Ticket.Data.csproj.AssemblyReference.cache
+C:\Users\pouya\OneDrive\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Data\obj\Debug\net5.0\Ticket.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pouya\OneDrive\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Data\obj\Debug\net5.0\Ticket.Data.AssemblyInfoInputs.cache
+C:\Users\pouya\OneDrive\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Data\obj\Debug\net5.0\Ticket.Data.AssemblyInfo.cs
+C:\Users\pouya\OneDrive\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Data\obj\Debug\net5.0\Ticket.Data.csproj.CoreCompileInputs.cache
+C:\Users\pouya\OneDrive\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Data\obj\Debug\net5.0\Ticket.Data.dll
+C:\Users\pouya\OneDrive\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Data\obj\Debug\net5.0\refint\Ticket.Data.dll
+C:\Users\pouya\OneDrive\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Data\obj\Debug\net5.0\Ticket.Data.pdb
+C:\Users\pouya\OneDrive\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Data\obj\Debug\net5.0\ref\Ticket.Data.dll
+C:\Users\pouya\OneDrive\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Data\bin\Debug\net5.0\Ticket.Data.runtimeconfig.json
+C:\Users\pouya\OneDrive\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Data\bin\Debug\net5.0\Ticket.Data.runtimeconfig.dev.json
+C:\Users\pouya\OneDrive\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Data\obj\Debug\net5.0\Ticket.Data.genruntimeconfig.cache
