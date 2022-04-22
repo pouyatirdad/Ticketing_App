@@ -2,7 +2,74 @@
   "version": 3,
   "targets": {
     "net5.0": {
+<<<<<<< HEAD
       "Microsoft.CSharp/4.5.0": {
+=======
+      "Humanizer.Core/2.8.26": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Humanizer.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Http/2.2.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
+          "Microsoft.AspNetCore.WebUtilities": "2.2.0",
+          "Microsoft.Extensions.ObjectPool": "2.2.0",
+          "Microsoft.Extensions.Options": "2.2.0",
+          "Microsoft.Net.Http.Headers": "2.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Http.Abstractions/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "2.2.0",
+          "System.Text.Encodings.Web": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Http.Features/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "2.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.WebUtilities/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Net.Http.Headers": "2.2.0",
+          "System.Text.Encodings.Web": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.WebUtilities.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.WebUtilities.dll": {}
+        }
+      },
+      "Microsoft.CSharp/4.7.0": {
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "type": "package",
         "compile": {
           "ref/netcoreapp2.0/_._": {}
@@ -79,11 +146,19 @@
           }
         }
       },
+<<<<<<< HEAD
       "Microsoft.EntityFrameworkCore/5.0.16": {
         "type": "package",
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Abstractions": "5.0.16",
           "Microsoft.EntityFrameworkCore.Analyzers": "5.0.16",
+=======
+      "Microsoft.EntityFrameworkCore/5.0.14": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Abstractions": "5.0.14",
+          "Microsoft.EntityFrameworkCore.Analyzers": "5.0.14",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
           "Microsoft.Extensions.Caching.Memory": "5.0.0",
           "Microsoft.Extensions.DependencyInjection": "5.0.2",
           "Microsoft.Extensions.Logging": "5.0.0",
@@ -98,7 +173,11 @@
           "lib/netstandard2.1/Microsoft.EntityFrameworkCore.dll": {}
         }
       },
+<<<<<<< HEAD
       "Microsoft.EntityFrameworkCore.Abstractions/5.0.16": {
+=======
+      "Microsoft.EntityFrameworkCore.Abstractions/5.0.14": {
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "type": "package",
         "compile": {
           "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Abstractions.dll": {}
@@ -107,7 +186,11 @@
           "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Abstractions.dll": {}
         }
       },
+<<<<<<< HEAD
       "Microsoft.EntityFrameworkCore.Analyzers/5.0.16": {
+=======
+      "Microsoft.EntityFrameworkCore.Analyzers/5.0.14": {
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "type": "package",
         "compile": {
           "lib/netstandard2.0/_._": {}
@@ -116,10 +199,34 @@
           "lib/netstandard2.0/_._": {}
         }
       },
+<<<<<<< HEAD
       "Microsoft.EntityFrameworkCore.Relational/5.0.16": {
         "type": "package",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "5.0.16",
+=======
+      "Microsoft.EntityFrameworkCore.Design/5.0.14": {
+        "type": "package",
+        "dependencies": {
+          "Humanizer.Core": "2.8.26",
+          "Microsoft.CSharp": "4.7.0",
+          "Microsoft.EntityFrameworkCore.Relational": "5.0.14"
+        },
+        "compile": {
+          "lib/netstandard2.1/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Design.dll": {}
+        },
+        "build": {
+          "build/netcoreapp3.0/Microsoft.EntityFrameworkCore.Design.props": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Relational/5.0.14": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.14",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
           "Microsoft.Extensions.Configuration.Abstractions": "5.0.0"
         },
         "compile": {
@@ -129,11 +236,19 @@
           "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Relational.dll": {}
         }
       },
+<<<<<<< HEAD
       "Microsoft.EntityFrameworkCore.SqlServer/5.0.16": {
         "type": "package",
         "dependencies": {
           "Microsoft.Data.SqlClient": "2.0.1",
           "Microsoft.EntityFrameworkCore.Relational": "5.0.16"
+=======
+      "Microsoft.EntityFrameworkCore.SqlServer/5.0.14": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Data.SqlClient": "2.0.1",
+          "Microsoft.EntityFrameworkCore.Relational": "5.0.14"
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         },
         "compile": {
           "lib/netstandard2.1/Microsoft.EntityFrameworkCore.SqlServer.dll": {}
@@ -142,6 +257,21 @@
           "lib/netstandard2.1/Microsoft.EntityFrameworkCore.SqlServer.dll": {}
         }
       },
+<<<<<<< HEAD
+=======
+      "Microsoft.EntityFrameworkCore.Tools/5.0.14": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "5.0.14"
+        },
+        "compile": {
+          "lib/netstandard2.1/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/_._": {}
+        }
+      },
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
       "Microsoft.Extensions.Caching.Abstractions/5.0.0": {
         "type": "package",
         "dependencies": {
@@ -227,6 +357,18 @@
           "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {}
         }
       },
+<<<<<<< HEAD
+=======
+      "Microsoft.Extensions.ObjectPool/2.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.ObjectPool.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.ObjectPool.dll": {}
+        }
+      },
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
       "Microsoft.Extensions.Options/5.0.0": {
         "type": "package",
         "dependencies": {
@@ -332,6 +474,22 @@
           "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.dll": {}
         }
       },
+<<<<<<< HEAD
+=======
+      "Microsoft.Net.Http.Headers/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "2.2.0",
+          "System.Buffers": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Net.Http.Headers.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Net.Http.Headers.dll": {}
+        }
+      },
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
       "Microsoft.NETCore.Platforms/3.1.0": {
         "type": "package",
         "compile": {
@@ -441,6 +599,18 @@
           "lib/netstandard1.0/_._": {}
         }
       },
+<<<<<<< HEAD
+=======
+      "System.Buffers/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/_._": {}
+        }
+      },
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
       "System.Collections/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -1316,6 +1486,18 @@
           "ref/netstandard1.3/System.Text.Encoding.Extensions.dll": {}
         }
       },
+<<<<<<< HEAD
+=======
+      "System.Text.Encodings.Web/4.5.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/System.Text.Encodings.Web.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Text.Encodings.Web.dll": {}
+        }
+      },
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
       "System.Text.RegularExpressions/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -1486,9 +1668,15 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
+<<<<<<< HEAD
           "Microsoft.EntityFrameworkCore": "5.0.16",
           "Microsoft.EntityFrameworkCore.Relational": "5.0.16",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.16"
+=======
+          "Microsoft.EntityFrameworkCore": "5.0.14",
+          "Microsoft.EntityFrameworkCore.Relational": "5.0.14",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.14"
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         },
         "compile": {
           "bin/placeholder/Ticket.Data.dll": {}
@@ -1500,10 +1688,85 @@
     }
   },
   "libraries": {
+<<<<<<< HEAD
     "Microsoft.CSharp/4.5.0": {
       "sha512": "kaj6Wb4qoMuH3HySFJhxwQfe8R/sJsNJnANrvv8WdFPMoNbKY5htfNscv+LHCu5ipz+49m2e+WQXpLXr9XYemQ==",
       "type": "package",
       "path": "microsoft.csharp/4.5.0",
+=======
+    "Humanizer.Core/2.8.26": {
+      "sha512": "OiKusGL20vby4uDEswj2IgkdchC1yQ6rwbIkZDVBPIR6al2b7n3pC91elBul9q33KaBgRKhbZH3+2Ur4fnWx2A==",
+      "type": "package",
+      "path": "humanizer.core/2.8.26",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "humanizer.core.2.8.26.nupkg.sha512",
+        "humanizer.core.nuspec",
+        "lib/netstandard1.0/Humanizer.dll",
+        "lib/netstandard1.0/Humanizer.xml",
+        "lib/netstandard2.0/Humanizer.dll",
+        "lib/netstandard2.0/Humanizer.xml",
+        "logo.png"
+      ]
+    },
+    "Microsoft.AspNetCore.Http/2.2.2": {
+      "sha512": "BAibpoItxI5puk7YJbIGj95arZueM8B8M5xT1fXBn3hb3L2G3ucrZcYXv1gXdaroLbntUs8qeV8iuBrpjQsrKw==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.http/2.2.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.xml",
+        "microsoft.aspnetcore.http.2.2.2.nupkg.sha512",
+        "microsoft.aspnetcore.http.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Http.Abstractions/2.2.0": {
+      "sha512": "Nxs7Z1q3f1STfLYKJSVXCs1iBl+Ya6E8o4Oy1bCxJ/rNI44E/0f6tbsrVqAWfB7jlnJfyaAtIalBVxPKUPQb4Q==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.http.abstractions/2.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Abstractions.xml",
+        "microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
+        "microsoft.aspnetcore.http.abstractions.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Http.Features/2.2.0": {
+      "sha512": "ziFz5zH8f33En4dX81LW84I6XrYXKf9jg6aM39cM+LffN9KJahViKZ61dGMSO2gd3e+qe5yBRwsesvyqlZaSMg==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.http.features/2.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.xml",
+        "microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
+        "microsoft.aspnetcore.http.features.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.WebUtilities/2.2.0": {
+      "sha512": "9ErxAAKaDzxXASB/b5uLEkLgUWv1QbeVxyJYEHQwMaxXOeFFVkQxiq8RyfVcifLU7NR0QY0p3acqx4ZpYfhHDg==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.webutilities/2.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.AspNetCore.WebUtilities.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.WebUtilities.xml",
+        "microsoft.aspnetcore.webutilities.2.2.0.nupkg.sha512",
+        "microsoft.aspnetcore.webutilities.nuspec"
+      ]
+    },
+    "Microsoft.CSharp/4.7.0": {
+      "sha512": "pTj+D3uJWyN3My70i2Hqo+OXixq3Os2D1nJ2x92FFo6sk8fYS1m1WLNTs0Dc1uPaViH0YvEEwvzddQ7y4rhXmA==",
+      "type": "package",
+      "path": "microsoft.csharp/4.7.0",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1516,6 +1779,10 @@
         "lib/netcoreapp2.0/_._",
         "lib/netstandard1.3/Microsoft.CSharp.dll",
         "lib/netstandard2.0/Microsoft.CSharp.dll",
+<<<<<<< HEAD
+=======
+        "lib/netstandard2.0/Microsoft.CSharp.xml",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "lib/portable-net45+win8+wp8+wpa81/_._",
         "lib/uap10.0.16299/_._",
         "lib/win8/_._",
@@ -1525,7 +1792,11 @@
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
         "lib/xamarinwatchos10/_._",
+<<<<<<< HEAD
         "microsoft.csharp.4.5.0.nupkg.sha512",
+=======
+        "microsoft.csharp.4.7.0.nupkg.sha512",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "microsoft.csharp.nuspec",
         "ref/MonoAndroid10/_._",
         "ref/MonoTouch10/_._",
@@ -1649,16 +1920,24 @@
         "runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.pdb"
       ]
     },
+<<<<<<< HEAD
     "Microsoft.EntityFrameworkCore/5.0.16": {
       "sha512": "niMGaRvTPPGAhuhKxFdmdfeW5Vo6rvhNXy2vnRotC7ToR/1ST6iDqZCIvW4L/Pt2+ISiFbvcqRQIE9MrNSMUZQ==",
       "type": "package",
       "path": "microsoft.entityframeworkcore/5.0.16",
+=======
+    "Microsoft.EntityFrameworkCore/5.0.14": {
+      "sha512": "WP23yZ6WDKcLt+ddQCx1728JTHf+Yds9V8heMMY7VjlwGqTMxOYBGnaJ4KkSu/x7pBHGd6I9Vg70YBqUmjGVjg==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore/5.0.14",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/netstandard2.1/Microsoft.EntityFrameworkCore.dll",
         "lib/netstandard2.1/Microsoft.EntityFrameworkCore.xml",
+<<<<<<< HEAD
         "microsoft.entityframeworkcore.5.0.16.nupkg.sha512",
         "microsoft.entityframeworkcore.nuspec"
       ]
@@ -1667,12 +1946,23 @@
       "sha512": "nGESdyRnKGQ0PBUBrtVwGz3U13/C7RKcOctps2WozCGo5fHnQmcVtZ23mYc3Ri1LSMY+l4vLblBPJUzRaPaAWA==",
       "type": "package",
       "path": "microsoft.entityframeworkcore.abstractions/5.0.16",
+=======
+        "microsoft.entityframeworkcore.5.0.14.nupkg.sha512",
+        "microsoft.entityframeworkcore.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.Abstractions/5.0.14": {
+      "sha512": "yZmWL6mcd8dOrbJdym/T6jNpmZ3czjjv8Vq5KBd45/EzOzdFC0A9b4ZSqFVxc36HCwJdT+5hAwplJnb600ZHAA==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.abstractions/5.0.14",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Abstractions.dll",
         "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Abstractions.xml",
+<<<<<<< HEAD
         "microsoft.entityframeworkcore.abstractions.5.0.16.nupkg.sha512",
         "microsoft.entityframeworkcore.abstractions.nuspec"
       ]
@@ -1681,12 +1971,23 @@
       "sha512": "BiSrqLpJ6dv6xOH1xuHG/85edPfQo5DbuUZJqXNCOm3DD9BjnxaeVYnl2EUdadEUbCTTNVhXT0iKnaOpD5bv6A==",
       "type": "package",
       "path": "microsoft.entityframeworkcore.analyzers/5.0.16",
+=======
+        "microsoft.entityframeworkcore.abstractions.5.0.14.nupkg.sha512",
+        "microsoft.entityframeworkcore.abstractions.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.Analyzers/5.0.14": {
+      "sha512": "Z9b4jHTwT1KshOJslNuW9fU7A86n48q1ysn5D6K023qCMw0/NwDvhqjSf/2lK0U0Tpgz3XBa2Tc51Yf20uZeNg==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.analyzers/5.0.14",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "analyzers/dotnet/cs/Microsoft.EntityFrameworkCore.Analyzers.dll",
         "lib/netstandard2.0/_._",
+<<<<<<< HEAD
         "microsoft.entityframeworkcore.analyzers.5.0.16.nupkg.sha512",
         "microsoft.entityframeworkcore.analyzers.nuspec"
       ]
@@ -1695,12 +1996,38 @@
       "sha512": "B1ux0Pf1tTo7AXRldxInBWlFVm0/SVdV/7wSBxUmwy+uRO4oQCIJk69ot1DbL8YCQKjSMMB6IZkRTK95Haetow==",
       "type": "package",
       "path": "microsoft.entityframeworkcore.relational/5.0.16",
+=======
+        "microsoft.entityframeworkcore.analyzers.5.0.14.nupkg.sha512",
+        "microsoft.entityframeworkcore.analyzers.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.Design/5.0.14": {
+      "sha512": "QwlcXhv3NPdU9WQnA0K7i31CLV4dJMEtdhNPNGfSdxVxPzu9sOfqr6/MOjJEey5LFsuy1a8zay+Ina3GRuFO7Q==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.design/5.0.14",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "build/netcoreapp3.0/Microsoft.EntityFrameworkCore.Design.props",
+        "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Design.dll",
+        "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Design.xml",
+        "microsoft.entityframeworkcore.design.5.0.14.nupkg.sha512",
+        "microsoft.entityframeworkcore.design.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.Relational/5.0.14": {
+      "sha512": "bdoquudIyr1CtOHYhXh+twHj3AJ8ih+BBRjzZKv774ky5MqNiYnjMvrS2h1U1vgLMbagSIhkqhmpMkqhc0Lgbw==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.relational/5.0.14",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Relational.dll",
         "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Relational.xml",
+<<<<<<< HEAD
         "microsoft.entityframeworkcore.relational.5.0.16.nupkg.sha512",
         "microsoft.entityframeworkcore.relational.nuspec"
       ]
@@ -1709,16 +2036,57 @@
       "sha512": "CMfZHL4vdQD5JUYdmcA90LkuV9XkNF97hhSBUzcZPZ7VFgQR7etvn9NVsDvoi+Gn08p1lU4KsCJw7B3Ye5GlVQ==",
       "type": "package",
       "path": "microsoft.entityframeworkcore.sqlserver/5.0.16",
+=======
+        "microsoft.entityframeworkcore.relational.5.0.14.nupkg.sha512",
+        "microsoft.entityframeworkcore.relational.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.SqlServer/5.0.14": {
+      "sha512": "JTw4oJ7fa//hVaETu9UuUBH4DLngWV99Rbf1SOOtB+toLKQltfsLHnUu6CiSwH+MmnYd4rT+HMoxYEGov2sOHA==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.sqlserver/5.0.14",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/netstandard2.1/Microsoft.EntityFrameworkCore.SqlServer.dll",
         "lib/netstandard2.1/Microsoft.EntityFrameworkCore.SqlServer.xml",
+<<<<<<< HEAD
         "microsoft.entityframeworkcore.sqlserver.5.0.16.nupkg.sha512",
         "microsoft.entityframeworkcore.sqlserver.nuspec"
       ]
     },
+=======
+        "microsoft.entityframeworkcore.sqlserver.5.0.14.nupkg.sha512",
+        "microsoft.entityframeworkcore.sqlserver.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.Tools/5.0.14": {
+      "sha512": "6oa1d8+MhLK9NQSLbr5nd7oBlAQnpdcbW+X6ekFfFDOV59+8MbGfOdRpZmAHl5DkPNDzap5wua6gpovv2JjbnQ==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.tools/5.0.14",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/netstandard2.1/_._",
+        "microsoft.entityframeworkcore.tools.5.0.14.nupkg.sha512",
+        "microsoft.entityframeworkcore.tools.nuspec",
+        "tools/EntityFrameworkCore.PS2.psd1",
+        "tools/EntityFrameworkCore.PS2.psm1",
+        "tools/EntityFrameworkCore.psd1",
+        "tools/EntityFrameworkCore.psm1",
+        "tools/about_EntityFrameworkCore.help.txt",
+        "tools/init.ps1",
+        "tools/net461/any/ef.exe",
+        "tools/net461/win-x86/ef.exe",
+        "tools/netcoreapp2.0/any/ef.dll",
+        "tools/netcoreapp2.0/any/ef.runtimeconfig.json"
+      ]
+    },
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
     "Microsoft.Extensions.Caching.Abstractions/5.0.0": {
       "sha512": "bu8As90/SBAouMZ6fJ+qRNo1X+KgHGrVueFhhYi+E5WqEhcnp2HoWRFnMzXQ6g4RdZbvPowFerSbKNH4Dtg5yg==",
       "type": "package",
@@ -1865,6 +2233,22 @@
         "version.txt"
       ]
     },
+<<<<<<< HEAD
+=======
+    "Microsoft.Extensions.ObjectPool/2.2.0": {
+      "sha512": "gA8H7uQOnM5gb+L0uTNjViHYr+hRDqCdfugheGo/MxQnuHzmhhzCBTIPm19qL1z1Xe0NEMabfcOBGv9QghlZ8g==",
+      "type": "package",
+      "path": "microsoft.extensions.objectpool/2.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Extensions.ObjectPool.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.ObjectPool.xml",
+        "microsoft.extensions.objectpool.2.2.0.nupkg.sha512",
+        "microsoft.extensions.objectpool.nuspec"
+      ]
+    },
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
     "Microsoft.Extensions.Options/5.0.0": {
       "sha512": "CBvR92TCJ5uBIdd9/HzDSrxYak+0W/3+yxrNg8Qm6Bmrkh5L+nu6m3WeazQehcZ5q1/6dDA7J5YdQjim0165zg==",
       "type": "package",
@@ -2054,6 +2438,22 @@
         "microsoft.identitymodel.tokens.nuspec"
       ]
     },
+<<<<<<< HEAD
+=======
+    "Microsoft.Net.Http.Headers/2.2.0": {
+      "sha512": "iZNkjYqlo8sIOI0bQfpsSoMTmB/kyvmV2h225ihyZT33aTp48ZpF6qYnXxzSXmHt8DpBAwBTX+1s1UFLbYfZKg==",
+      "type": "package",
+      "path": "microsoft.net.http.headers/2.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Net.Http.Headers.dll",
+        "lib/netstandard2.0/Microsoft.Net.Http.Headers.xml",
+        "microsoft.net.http.headers.2.2.0.nupkg.sha512",
+        "microsoft.net.http.headers.nuspec"
+      ]
+    },
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
     "Microsoft.NETCore.Platforms/3.1.0": {
       "sha512": "z7aeg8oHln2CuNulfhiLYxCVMPEwBl3rzicjvIX+4sUuCwvXw5oXQEtbiU2c0z4qYL5L3Kmx0mMA/+t/SbY67w==",
       "type": "package",
@@ -2195,6 +2595,10 @@
       "path": "runtime.native.system/4.3.0",
       "files": [
         ".nupkg.metadata",
+<<<<<<< HEAD
+=======
+        ".signature.p7s",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
@@ -2202,12 +2606,48 @@
         "runtime.native.system.nuspec"
       ]
     },
+<<<<<<< HEAD
+=======
+    "System.Buffers/4.5.0": {
+      "sha512": "pL2ChpaRRWI/p4LXyy4RgeWlYF2sgfj/pnVMvBqwNFr5cXg7CXNnWZWxrOONLg8VGdFB8oB+EG2Qw4MLgTOe+A==",
+      "type": "package",
+      "path": "system.buffers/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.1/System.Buffers.dll",
+        "lib/netstandard1.1/System.Buffers.xml",
+        "lib/netstandard2.0/System.Buffers.dll",
+        "lib/netstandard2.0/System.Buffers.xml",
+        "lib/uap10.0.16299/_._",
+        "ref/net45/System.Buffers.dll",
+        "ref/net45/System.Buffers.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.1/System.Buffers.dll",
+        "ref/netstandard1.1/System.Buffers.xml",
+        "ref/netstandard2.0/System.Buffers.dll",
+        "ref/netstandard2.0/System.Buffers.xml",
+        "ref/uap10.0.16299/_._",
+        "system.buffers.4.5.0.nupkg.sha512",
+        "system.buffers.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
     "System.Collections/4.3.0": {
       "sha512": "3Dcj85/TBdVpL5Zr+gEEBUuFe2icOnLalmEh9hfck1PTYbbyWuZgh4fmm2ysCLTrqLQw6t3TgTyJ+VLp+Qb+Lw==",
       "type": "package",
       "path": "system.collections/4.3.0",
       "files": [
         ".nupkg.metadata",
+<<<<<<< HEAD
+=======
+        ".signature.p7s",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -2275,6 +2715,10 @@
       "path": "system.collections.concurrent/4.3.0",
       "files": [
         ".nupkg.metadata",
+<<<<<<< HEAD
+=======
+        ".signature.p7s",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -2368,6 +2812,10 @@
       "path": "system.collections.nongeneric/4.3.0",
       "files": [
         ".nupkg.metadata",
+<<<<<<< HEAD
+=======
+        ".signature.p7s",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -2406,6 +2854,10 @@
       "path": "system.collections.specialized/4.3.0",
       "files": [
         ".nupkg.metadata",
+<<<<<<< HEAD
+=======
+        ".signature.p7s",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -2444,6 +2896,10 @@
       "path": "system.componentmodel/4.3.0",
       "files": [
         ".nupkg.metadata",
+<<<<<<< HEAD
+=======
+        ".signature.p7s",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -2592,6 +3048,10 @@
       "path": "system.componentmodel.primitives/4.3.0",
       "files": [
         ".nupkg.metadata",
+<<<<<<< HEAD
+=======
+        ".signature.p7s",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -2630,6 +3090,10 @@
       "path": "system.componentmodel.typeconverter/4.3.0",
       "files": [
         ".nupkg.metadata",
+<<<<<<< HEAD
+=======
+        ".signature.p7s",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -2705,6 +3169,10 @@
       "path": "system.diagnostics.debug/4.3.0",
       "files": [
         ".nupkg.metadata",
+<<<<<<< HEAD
+=======
+        ".signature.p7s",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -2800,6 +3268,10 @@
       "path": "system.diagnostics.tools/4.3.0",
       "files": [
         ".nupkg.metadata",
+<<<<<<< HEAD
+=======
+        ".signature.p7s",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -2856,6 +3328,10 @@
       "path": "system.diagnostics.tracing/4.3.0",
       "files": [
         ".nupkg.metadata",
+<<<<<<< HEAD
+=======
+        ".signature.p7s",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -2984,6 +3460,10 @@
       "path": "system.dynamic.runtime/4.3.0",
       "files": [
         ".nupkg.metadata",
+<<<<<<< HEAD
+=======
+        ".signature.p7s",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3054,6 +3534,10 @@
       "path": "system.globalization/4.3.0",
       "files": [
         ".nupkg.metadata",
+<<<<<<< HEAD
+=======
+        ".signature.p7s",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3121,6 +3605,10 @@
       "path": "system.globalization.extensions/4.3.0",
       "files": [
         ".nupkg.metadata",
+<<<<<<< HEAD
+=======
+        ".signature.p7s",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3182,6 +3670,10 @@
       "path": "system.io/4.3.0",
       "files": [
         ".nupkg.metadata",
+<<<<<<< HEAD
+=======
+        ".signature.p7s",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3262,6 +3754,10 @@
       "path": "system.io.filesystem/4.3.0",
       "files": [
         ".nupkg.metadata",
+<<<<<<< HEAD
+=======
+        ".signature.p7s",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3299,6 +3795,10 @@
       "path": "system.io.filesystem.primitives/4.3.0",
       "files": [
         ".nupkg.metadata",
+<<<<<<< HEAD
+=======
+        ".signature.p7s",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3337,6 +3837,10 @@
       "path": "system.linq/4.3.0",
       "files": [
         ".nupkg.metadata",
+<<<<<<< HEAD
+=======
+        ".signature.p7s",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3408,6 +3912,10 @@
       "path": "system.linq.expressions/4.3.0",
       "files": [
         ".nupkg.metadata",
+<<<<<<< HEAD
+=======
+        ".signature.p7s",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3491,6 +3999,10 @@
       "path": "system.net.nameresolution/4.3.0",
       "files": [
         ".nupkg.metadata",
+<<<<<<< HEAD
+=======
+        ".signature.p7s",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3532,6 +4044,10 @@
       "path": "system.net.primitives/4.3.0",
       "files": [
         ".nupkg.metadata",
+<<<<<<< HEAD
+=======
+        ".signature.p7s",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3610,6 +4126,10 @@
       "path": "system.objectmodel/4.3.0",
       "files": [
         ".nupkg.metadata",
+<<<<<<< HEAD
+=======
+        ".signature.p7s",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3679,6 +4199,10 @@
       "path": "system.private.datacontractserialization/4.3.0",
       "files": [
         ".nupkg.metadata",
+<<<<<<< HEAD
+=======
+        ".signature.p7s",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.3/System.Private.DataContractSerialization.dll",
@@ -3708,6 +4232,10 @@
       "path": "system.reflection/4.3.0",
       "files": [
         ".nupkg.metadata",
+<<<<<<< HEAD
+=======
+        ".signature.p7s",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3788,6 +4316,10 @@
       "path": "system.reflection.emit/4.3.0",
       "files": [
         ".nupkg.metadata",
+<<<<<<< HEAD
+=======
+        ".signature.p7s",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3823,6 +4355,10 @@
       "path": "system.reflection.emit.ilgeneration/4.3.0",
       "files": [
         ".nupkg.metadata",
+<<<<<<< HEAD
+=======
+        ".signature.p7s",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3867,6 +4403,10 @@
       "path": "system.reflection.emit.lightweight/4.3.0",
       "files": [
         ".nupkg.metadata",
+<<<<<<< HEAD
+=======
+        ".signature.p7s",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3911,6 +4451,10 @@
       "path": "system.reflection.extensions/4.3.0",
       "files": [
         ".nupkg.metadata",
+<<<<<<< HEAD
+=======
+        ".signature.p7s",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3967,6 +4511,10 @@
       "path": "system.reflection.primitives/4.3.0",
       "files": [
         ".nupkg.metadata",
+<<<<<<< HEAD
+=======
+        ".signature.p7s",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4023,6 +4571,10 @@
       "path": "system.reflection.typeextensions/4.3.0",
       "files": [
         ".nupkg.metadata",
+<<<<<<< HEAD
+=======
+        ".signature.p7s",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4076,6 +4628,10 @@
       "path": "system.resources.resourcemanager/4.3.0",
       "files": [
         ".nupkg.metadata",
+<<<<<<< HEAD
+=======
+        ".signature.p7s",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4132,6 +4688,10 @@
       "path": "system.runtime/4.3.0",
       "files": [
         ".nupkg.metadata",
+<<<<<<< HEAD
+=======
+        ".signature.p7s",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4259,6 +4819,10 @@
       "path": "system.runtime.extensions/4.3.0",
       "files": [
         ".nupkg.metadata",
+<<<<<<< HEAD
+=======
+        ".signature.p7s",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4339,6 +4903,10 @@
       "path": "system.runtime.handles/4.3.0",
       "files": [
         ".nupkg.metadata",
+<<<<<<< HEAD
+=======
+        ".signature.p7s",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4376,6 +4944,10 @@
       "path": "system.runtime.interopservices/4.3.0",
       "files": [
         ".nupkg.metadata",
+<<<<<<< HEAD
+=======
+        ".signature.p7s",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4468,6 +5040,10 @@
       "path": "system.runtime.numerics/4.3.0",
       "files": [
         ".nupkg.metadata",
+<<<<<<< HEAD
+=======
+        ".signature.p7s",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4524,6 +5100,10 @@
       "path": "system.runtime.serialization.formatters/4.3.0",
       "files": [
         ".nupkg.metadata",
+<<<<<<< HEAD
+=======
+        ".signature.p7s",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4552,7 +5132,10 @@
       "path": "system.runtime.serialization.json/4.3.0",
       "files": [
         ".nupkg.metadata",
+<<<<<<< HEAD
         ".signature.p7s",
+=======
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4611,6 +5194,10 @@
       "path": "system.runtime.serialization.primitives/4.3.0",
       "files": [
         ".nupkg.metadata",
+<<<<<<< HEAD
+=======
+        ".signature.p7s",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4792,6 +5379,10 @@
       "path": "system.security.cryptography.primitives/4.3.0",
       "files": [
         ".nupkg.metadata",
+<<<<<<< HEAD
+=======
+        ".signature.p7s",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4987,6 +5578,10 @@
       "path": "system.text.encoding/4.3.0",
       "files": [
         ".nupkg.metadata",
+<<<<<<< HEAD
+=======
+        ".signature.p7s",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5094,6 +5689,10 @@
       "path": "system.text.encoding.extensions/4.3.0",
       "files": [
         ".nupkg.metadata",
+<<<<<<< HEAD
+=======
+        ".signature.p7s",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5155,12 +5754,38 @@
         "system.text.encoding.extensions.nuspec"
       ]
     },
+<<<<<<< HEAD
+=======
+    "System.Text.Encodings.Web/4.5.0": {
+      "sha512": "Xg4G4Indi4dqP1iuAiMSwpiWS54ZghzR644OtsRCm/m/lBMG8dUBhLVN7hLm8NNrNTR+iGbshCPTwrvxZPlm4g==",
+      "type": "package",
+      "path": "system.text.encodings.web/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netstandard1.0/System.Text.Encodings.Web.dll",
+        "lib/netstandard1.0/System.Text.Encodings.Web.xml",
+        "lib/netstandard2.0/System.Text.Encodings.Web.dll",
+        "lib/netstandard2.0/System.Text.Encodings.Web.xml",
+        "system.text.encodings.web.4.5.0.nupkg.sha512",
+        "system.text.encodings.web.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
     "System.Text.RegularExpressions/4.3.0": {
       "sha512": "RpT2DA+L660cBt1FssIE9CAGpLFdFPuheB7pLpKpn6ZXNby7jDERe8Ua/Ne2xGiwLVG2JOqziiaVCGDon5sKFA==",
       "type": "package",
       "path": "system.text.regularexpressions/4.3.0",
       "files": [
         ".nupkg.metadata",
+<<<<<<< HEAD
+=======
+        ".signature.p7s",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5244,6 +5869,10 @@
       "path": "system.threading/4.3.0",
       "files": [
         ".nupkg.metadata",
+<<<<<<< HEAD
+=======
+        ".signature.p7s",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5314,6 +5943,10 @@
       "path": "system.threading.tasks/4.3.0",
       "files": [
         ".nupkg.metadata",
+<<<<<<< HEAD
+=======
+        ".signature.p7s",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5381,6 +6014,10 @@
       "path": "system.threading.tasks.extensions/4.3.0",
       "files": [
         ".nupkg.metadata",
+<<<<<<< HEAD
+=======
+        ".signature.p7s",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/System.Threading.Tasks.Extensions.dll",
@@ -5418,6 +6055,10 @@
       "path": "system.xml.readerwriter/4.3.0",
       "files": [
         ".nupkg.metadata",
+<<<<<<< HEAD
+=======
+        ".signature.p7s",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5489,6 +6130,10 @@
       "path": "system.xml.xdocument/4.3.0",
       "files": [
         ".nupkg.metadata",
+<<<<<<< HEAD
+=======
+        ".signature.p7s",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5558,6 +6203,10 @@
       "path": "system.xml.xmldocument/4.3.0",
       "files": [
         ".nupkg.metadata",
+<<<<<<< HEAD
+=======
+        ".signature.p7s",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5596,6 +6245,10 @@
       "path": "system.xml.xmlserializer/4.3.0",
       "files": [
         ".nupkg.metadata",
+<<<<<<< HEAD
+=======
+        ".signature.p7s",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5668,27 +6321,36 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+<<<<<<< HEAD
+=======
+      "Microsoft.AspNetCore.Http >= 2.2.2",
+      "Microsoft.EntityFrameworkCore >= 5.0.14",
+      "Microsoft.EntityFrameworkCore.Design >= 5.0.14",
+      "Microsoft.EntityFrameworkCore.Relational >= 5.0.14",
+      "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.14",
+      "Microsoft.EntityFrameworkCore.Tools >= 5.0.14",
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
       "Ticket.Data >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\pouya\\.nuget\\packages\\": {},
+    "C:\\Users\\dev7\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pouya\\OneDrive\\Desktop\\Ticketing_App\\Backend\\Ticket.Api\\Ticket.Service\\Ticket.Service.csproj",
+      "projectUniqueName": "C:\\Users\\dev7\\Desktop\\Ticketing_App\\Backend\\Ticket.Api\\Ticket.Service\\Ticket.Service.csproj",
       "projectName": "Ticket.Service",
-      "projectPath": "C:\\Users\\pouya\\OneDrive\\Desktop\\Ticketing_App\\Backend\\Ticket.Api\\Ticket.Service\\Ticket.Service.csproj",
-      "packagesPath": "C:\\Users\\pouya\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pouya\\OneDrive\\Desktop\\Ticketing_App\\Backend\\Ticket.Api\\Ticket.Service\\obj\\",
+      "projectPath": "C:\\Users\\dev7\\Desktop\\Ticketing_App\\Backend\\Ticket.Api\\Ticket.Service\\Ticket.Service.csproj",
+      "packagesPath": "C:\\Users\\dev7\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\dev7\\Desktop\\Ticketing_App\\Backend\\Ticket.Api\\Ticket.Service\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\pouya\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\dev7\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5702,8 +6364,13 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+<<<<<<< HEAD
             "C:\\Users\\pouya\\OneDrive\\Desktop\\Ticketing_App\\Backend\\Ticket.Api\\Ticket.Data\\Ticket.Data.csproj": {
               "projectPath": "C:\\Users\\pouya\\OneDrive\\Desktop\\Ticketing_App\\Backend\\Ticket.Api\\Ticket.Data\\Ticket.Data.csproj"
+=======
+            "C:\\Users\\dev7\\Desktop\\Ticketing_App\\Backend\\Ticket.Api\\Ticket.Data\\Ticket.Data.csproj": {
+              "projectPath": "C:\\Users\\dev7\\Desktop\\Ticketing_App\\Backend\\Ticket.Api\\Ticket.Data\\Ticket.Data.csproj"
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
             }
           }
         }
@@ -5717,6 +6384,36 @@
     "frameworks": {
       "net5.0": {
         "targetAlias": "net5.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http": {
+            "target": "Package",
+            "version": "[2.2.2, )"
+          },
+          "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[5.0.14, )"
+          },
+          "Microsoft.EntityFrameworkCore.Design": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[5.0.14, )"
+          },
+          "Microsoft.EntityFrameworkCore.Relational": {
+            "target": "Package",
+            "version": "[5.0.14, )"
+          },
+          "Microsoft.EntityFrameworkCore.SqlServer": {
+            "target": "Package",
+            "version": "[5.0.14, )"
+          },
+          "Microsoft.EntityFrameworkCore.Tools": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[5.0.14, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
@@ -5732,7 +6429,11 @@
             "privateAssets": "all"
           }
         },
+<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
       }
     }
   }

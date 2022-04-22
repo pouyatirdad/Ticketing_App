@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pouya\\OneDrive\\Desktop\\Ticketing_App\\Backend\\Ticket.Api\\Ticket.Api\\Ticket.Api.csproj": {}
+    "C:\\Users\\dev7\\Desktop\\Ticketing_App\\Backend\\Ticket.Api\\Ticket.Api\\Ticket.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pouya\\OneDrive\\Desktop\\Ticketing_App\\Backend\\Ticket.Api\\Ticket.Api\\Ticket.Api.csproj": {
+    "C:\\Users\\dev7\\Desktop\\Ticketing_App\\Backend\\Ticket.Api\\Ticket.Api\\Ticket.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pouya\\OneDrive\\Desktop\\Ticketing_App\\Backend\\Ticket.Api\\Ticket.Api\\Ticket.Api.csproj",
+        "projectUniqueName": "C:\\Users\\dev7\\Desktop\\Ticketing_App\\Backend\\Ticket.Api\\Ticket.Api\\Ticket.Api.csproj",
         "projectName": "Ticket.Api",
-        "projectPath": "C:\\Users\\pouya\\OneDrive\\Desktop\\Ticketing_App\\Backend\\Ticket.Api\\Ticket.Api\\Ticket.Api.csproj",
-        "packagesPath": "C:\\Users\\pouya\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pouya\\OneDrive\\Desktop\\Ticketing_App\\Backend\\Ticket.Api\\Ticket.Api\\obj\\",
+        "projectPath": "C:\\Users\\dev7\\Desktop\\Ticketing_App\\Backend\\Ticket.Api\\Ticket.Api\\Ticket.Api.csproj",
+        "packagesPath": "C:\\Users\\dev7\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dev7\\Desktop\\Ticketing_App\\Backend\\Ticket.Api\\Ticket.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\pouya\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dev7\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -52,12 +52,17 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
+<<<<<<< HEAD
               "version": "[5.0.16, )"
+=======
+              "version": "[5.0.14, )"
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
+<<<<<<< HEAD
               "version": "[5.0.16, )"
             },
             "Microsoft.EntityFrameworkCore.Relational": {
@@ -71,6 +76,23 @@
             "Microsoft.Extensions.Configuration.Abstractions": {
               "target": "Package",
               "version": "[5.0.0, )"
+=======
+              "version": "[5.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[5.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.14, )"
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -95,6 +117,7 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
@@ -240,6 +263,9 @@
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         }
       }
     }

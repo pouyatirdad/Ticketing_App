@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\pouya\OneDrive\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Service\bin\Debug\net5.0\Ticket.Service.deps.json
 C:\Users\pouya\OneDrive\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Service\bin\Debug\net5.0\Ticket.Service.dll
 C:\Users\pouya\OneDrive\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Service\bin\Debug\net5.0\Ticket.Service.pdb
@@ -13,3 +14,23 @@ C:\Users\pouya\OneDrive\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Service\
 C:\Users\pouya\OneDrive\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Service\obj\Debug\net5.0\refint\Ticket.Service.dll
 C:\Users\pouya\OneDrive\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Service\obj\Debug\net5.0\Ticket.Service.pdb
 C:\Users\pouya\OneDrive\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Service\obj\Debug\net5.0\ref\Ticket.Service.dll
+=======
+C:\Users\dev7\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Service\bin\Debug\net5.0\Ticket.Service.deps.json
+C:\Users\dev7\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Service\bin\Debug\net5.0\Ticket.Service.runtimeconfig.json
+C:\Users\dev7\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Service\bin\Debug\net5.0\Ticket.Service.runtimeconfig.dev.json
+C:\Users\dev7\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Service\bin\Debug\net5.0\Ticket.Service.dll
+C:\Users\dev7\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Service\bin\Debug\net5.0\ref\Ticket.Service.dll
+C:\Users\dev7\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Service\bin\Debug\net5.0\Ticket.Service.pdb
+C:\Users\dev7\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Service\obj\Debug\net5.0\Ticket.Service.csproj.AssemblyReference.cache
+C:\Users\dev7\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Service\obj\Debug\net5.0\Ticket.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dev7\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Service\obj\Debug\net5.0\Ticket.Service.AssemblyInfoInputs.cache
+C:\Users\dev7\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Service\obj\Debug\net5.0\Ticket.Service.AssemblyInfo.cs
+C:\Users\dev7\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Service\obj\Debug\net5.0\Ticket.Service.csproj.CoreCompileInputs.cache
+C:\Users\dev7\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Service\obj\Debug\net5.0\Ticket.Service.dll
+C:\Users\dev7\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Service\obj\Debug\net5.0\ref\Ticket.Service.dll
+C:\Users\dev7\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Service\obj\Debug\net5.0\Ticket.Service.pdb
+C:\Users\dev7\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Service\obj\Debug\net5.0\Ticket.Service.genruntimeconfig.cache
+C:\Users\dev7\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Service\bin\Debug\net5.0\Ticket.Data.dll
+C:\Users\dev7\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Service\bin\Debug\net5.0\Ticket.Data.pdb
+C:\Users\dev7\Desktop\Ticketing_App\Backend\Ticket.Api\Ticket.Service\obj\Debug\net5.0\Ticket.Service.csproj.CopyComplete
+>>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
