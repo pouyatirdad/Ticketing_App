@@ -1,10 +1,9 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dev7\\Desktop\\Ticketing_App\\Backend\\Ticket.Api\\Ticket.Service\\Ticket.Service.csproj": {}
+    "C:\\Users\\pouya\\OneDrive\\Desktop\\Ticketing_App\\Backend\\Ticket.Api\\Ticket.Service\\Ticket.Service.csproj": {}
   },
   "projects": {
-<<<<<<< HEAD
     "C:\\Users\\pouya\\OneDrive\\Desktop\\Ticketing_App\\Backend\\Ticket.Api\\Ticket.Data\\Ticket.Data.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -13,22 +12,12 @@
         "projectPath": "C:\\Users\\pouya\\OneDrive\\Desktop\\Ticketing_App\\Backend\\Ticket.Api\\Ticket.Data\\Ticket.Data.csproj",
         "packagesPath": "C:\\Users\\pouya\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\pouya\\OneDrive\\Desktop\\Ticketing_App\\Backend\\Ticket.Api\\Ticket.Data\\obj\\",
-=======
-    "C:\\Users\\dev7\\Desktop\\Ticketing_App\\Backend\\Ticket.Api\\Ticket.Data\\Ticket.Data.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\dev7\\Desktop\\Ticketing_App\\Backend\\Ticket.Api\\Ticket.Data\\Ticket.Data.csproj",
-        "projectName": "Ticket.Data",
-        "projectPath": "C:\\Users\\dev7\\Desktop\\Ticketing_App\\Backend\\Ticket.Api\\Ticket.Data\\Ticket.Data.csproj",
-        "packagesPath": "C:\\Users\\dev7\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dev7\\Desktop\\Ticketing_App\\Backend\\Ticket.Api\\Ticket.Data\\obj\\",
->>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\dev7\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\pouya\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -56,17 +45,12 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-<<<<<<< HEAD
               "version": "[5.0.16, )"
-=======
-              "version": "[5.0.14, )"
->>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-<<<<<<< HEAD
               "version": "[5.0.16, )"
             },
             "Microsoft.EntityFrameworkCore.Relational": {
@@ -76,27 +60,12 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[5.0.16, )"
-=======
-              "version": "[5.0.14, )"
-            },
-            "Microsoft.EntityFrameworkCore.Relational": {
-              "target": "Package",
-              "version": "[5.0.14, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[5.0.14, )"
->>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-<<<<<<< HEAD
               "version": "[5.0.16, )"
-=======
-              "version": "[5.0.14, )"
->>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
             }
           },
           "imports": [
@@ -114,7 +83,6 @@
               "privateAssets": "all"
             }
           },
-<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
@@ -127,30 +95,12 @@
         "projectPath": "C:\\Users\\pouya\\OneDrive\\Desktop\\Ticketing_App\\Backend\\Ticket.Api\\Ticket.Service\\Ticket.Service.csproj",
         "packagesPath": "C:\\Users\\pouya\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\pouya\\OneDrive\\Desktop\\Ticketing_App\\Backend\\Ticket.Api\\Ticket.Service\\obj\\",
-=======
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Users\\dev7\\Desktop\\Ticketing_App\\Backend\\Ticket.Api\\Ticket.Service\\Ticket.Service.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\dev7\\Desktop\\Ticketing_App\\Backend\\Ticket.Api\\Ticket.Service\\Ticket.Service.csproj",
-        "projectName": "Ticket.Service",
-        "projectPath": "C:\\Users\\dev7\\Desktop\\Ticketing_App\\Backend\\Ticket.Api\\Ticket.Service\\Ticket.Service.csproj",
-        "packagesPath": "C:\\Users\\dev7\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dev7\\Desktop\\Ticketing_App\\Backend\\Ticket.Api\\Ticket.Service\\obj\\",
->>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-<<<<<<< HEAD
           "C:\\Users\\pouya\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-          "C:\\Users\\dev7\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -164,13 +114,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-<<<<<<< HEAD
               "C:\\Users\\pouya\\OneDrive\\Desktop\\Ticketing_App\\Backend\\Ticket.Api\\Ticket.Data\\Ticket.Data.csproj": {
                 "projectPath": "C:\\Users\\pouya\\OneDrive\\Desktop\\Ticketing_App\\Backend\\Ticket.Api\\Ticket.Data\\Ticket.Data.csproj"
-=======
-              "C:\\Users\\dev7\\Desktop\\Ticketing_App\\Backend\\Ticket.Api\\Ticket.Data\\Ticket.Data.csproj": {
-                "projectPath": "C:\\Users\\dev7\\Desktop\\Ticketing_App\\Backend\\Ticket.Api\\Ticket.Data\\Ticket.Data.csproj"
->>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
               }
             }
           }
@@ -184,39 +129,6 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-<<<<<<< HEAD
-=======
-          "dependencies": {
-            "Microsoft.AspNetCore.Http": {
-              "target": "Package",
-              "version": "[2.2.2, )"
-            },
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[5.0.14, )"
-            },
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[5.0.14, )"
-            },
-            "Microsoft.EntityFrameworkCore.Relational": {
-              "target": "Package",
-              "version": "[5.0.14, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[5.0.14, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[5.0.14, )"
-            }
-          },
->>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
           "imports": [
             "net461",
             "net462",
@@ -232,11 +144,7 @@
               "privateAssets": "all"
             }
           },
-<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
-=======
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
->>>>>>> 5eacd6381b6ee772f6e11d68bfa5a091ae5a4629
         }
       }
     }
