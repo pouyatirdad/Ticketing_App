@@ -30,6 +30,12 @@ namespace Ticket.Api.Controllers
             var findedReslut = ticketService.GetById(id);
             return findedReslut;
         }
+        [HttpGet("GetByConversation/{id:int}")]
+        public IEnumerable<Ticket.Data.Model.Ticket> GetByConversationID(int id)
+        {
+            var findedReslut = ticketService.getWithConversationID(id);
+            return findedReslut;
+        }
         [HttpPost("Create")]
         public bool Create(Ticket.Data.Model.Ticket model)
         {

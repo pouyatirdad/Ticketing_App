@@ -14,6 +14,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Ticket.Data.Context;
 using Ticket.Service.Repository;
+using Ticket.Service.Repository.Abstract;
+using Ticket.Service.Repository.Concrete;
 using Ticket.Service.Service;
 using Ticket.Service.Service.Concrete;
 
