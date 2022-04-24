@@ -1,13 +1,15 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Ticket.Data.Model;
 
 namespace Ticket.Data.Context
 {
-    public class MyDbContext:DbContext
+    public class MyDbContext : DbContext
     {
-        public MyDbContext(DbContextOptions options):base(options)
+        public MyDbContext(DbContextOptions options) : base(options)
         {
-                
+
         }
         public DbSet<Ticket.Data.Model.Ticket> Tickets { get; set; }
+        public DbSet<Conversation> Conversations { get; set; }
     }
 }

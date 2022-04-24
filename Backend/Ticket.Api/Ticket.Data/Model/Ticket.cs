@@ -18,5 +18,9 @@ namespace Ticket.Data.Model
         public int Status{ get; set; }
         public bool isDeleted { get; set; }
 
+        public int ConversationID { get; set; }
+        public Conversation Conversation { get; set; }
+
+
     }
 }
