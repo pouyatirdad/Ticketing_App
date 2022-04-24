@@ -2,6 +2,7 @@
 using System.Linq;
 using Ticket.Data.Context;
 using Ticket.Service.Repository;
+using Ticket.Service.Repository.Concrete;
 
 namespace Ticket.Service.Service.Concrete
 {
@@ -17,6 +18,11 @@ namespace Ticket.Service.Service.Concrete
         {
             var model = context.Tickets.Where(x => x.Status == id);
             return model;
+        }
+
+        public IEnumerable<Data.Model.Ticket> getWithConversationID(int id)
+        {
+            return context.Tickets.Where(x => x.ID == id);
         }
     }
 }
