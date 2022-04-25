@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Ticket.Data.Enums;
 
 namespace Ticket.Data.Model
 {
@@ -15,8 +16,8 @@ namespace Ticket.Data.Model
         public string Title { get; set; }
         [MaxLength(1000)]
         public string Description { get; set; }
-        public int Status{ get; set; }
-        public bool isDeleted { get; set; }
+        public int Status { get; set; } = (int)StatusEnum.Ticket.New;
+        public bool isDeleted { get; set; } = false;
 
         public int ConversationID { get; set; }
         public Conversation Conversation { get; set; }
