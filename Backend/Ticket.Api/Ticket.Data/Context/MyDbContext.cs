@@ -1,9 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Ticket.Data.Model;
 
 namespace Ticket.Data.Context
 {
-    public class MyDbContext : DbContext
+    public class MyDbContext : IdentityDbContext
     {
         public MyDbContext(DbContextOptions options) : base(options)
         {
