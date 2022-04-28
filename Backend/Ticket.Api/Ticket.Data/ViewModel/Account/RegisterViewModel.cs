@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Ticket.Data.ViewModel.Account
 {
-    public class Register
+    public class RegisterViewModel
     {
         [Required,Display(Name ="نام کاربری")]
         public string UserName { get; set; }
