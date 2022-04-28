@@ -9,5 +9,11 @@ namespace Ticket.Api.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public IActionResult Register(RegisterViewModel)
+        {
+            return View();
+        }
     }
 }
