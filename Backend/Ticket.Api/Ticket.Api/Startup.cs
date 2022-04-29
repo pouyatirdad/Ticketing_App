@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -8,16 +9,19 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Ticket.Data.Context;
 using Ticket.Service.Repository;
 using Ticket.Service.Repository.Abstract;
 using Ticket.Service.Repository.Concrete;
 using Ticket.Service.Service;
+using Ticket.Service.Service.Abstract;
 using Ticket.Service.Service.Concrete;
 
 namespace Ticket.Api
@@ -55,8 +59,28 @@ namespace Ticket.Api
                 .AddEntityFrameworkStores<MyDbContext>()
                 .AddDefaultTokenProviders();
 
+            services.AddAuthentication(auth =>
+            {
+                auth.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                auth.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(opt =>
+            {
+                opt.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    //ValidAudience = "",
+                    //ValidIssuer = "",
+                    RequireExpirationTime = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("this the key")),
+                    ValidateIssuerSigningKey = true
+                };
+            });
+
             services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
             services.AddScoped<ITicketService, TicketService>();
+            services.AddScoped<IConversationService, ConversationService>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

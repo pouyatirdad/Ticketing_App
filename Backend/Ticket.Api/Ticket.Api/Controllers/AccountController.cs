@@ -1,10 +1,16 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Ticket.Data.ViewModel.Account;
 
 namespace Ticket.Api.Controllers
 {
+    [ApiController]
+    [EnableCors("MyPolicy")]
+    [Route("[controller]")]
     public class AccountController : Controller
     {
         private readonly UserManager<IdentityUser> userManager;
@@ -13,13 +19,15 @@ namespace Ticket.Api.Controllers
         {
             this.userManager = userManager;
         }
-        [HttpGet]
-        public IActionResult Register()
+        [HttpGet("test")]
+        [Authorize]
+        public List<string> test()
         {
-            return View();
+            var model= new List<string>() {"hello","this is test" };
+            return model;
         }
 
-        [HttpPost]
+        [HttpPost("register")]
         public async Task<IActionResult> Register(RegisterViewModel model)
         {
 
@@ -28,26 +36,24 @@ namespace Ticket.Api.Controllers
 
                 var user = new IdentityUser()
                 {
-                    UserName=model.UserName,
-                    Email=model.Email,
-                    EmailConfirmed=true
+                    UserName = model.UserName,
+                    Email = model.Email,
+                    EmailConfirmed = true
                 };
 
-                var result= await userManager.CreateAsync(user,model.Password);
+                var result = await userManager.CreateAsync(user, model.Password);
 
                 if (result.Succeeded)
-                {
-
-                }
+                    return Ok(result);
 
                 foreach (var error in result.Errors)
                 {
-                    ModelState.AddModelError("error",error.Description);
+                    ModelState.AddModelError("error", error.Description);
                 }
 
-            }            
+            }
 
-            return View();
+            return BadRequest("Some properties are not valid"); // Status code: 400
         }
     }
 }
