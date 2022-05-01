@@ -10,8 +10,8 @@ using Ticket.Data.Context;
 namespace Ticket.Data.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20220426163824_identity")]
-    partial class identity
+    [Migration("20220501181447_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

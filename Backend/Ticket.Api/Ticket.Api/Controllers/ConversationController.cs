@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Cors;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,13 @@ namespace Ticket.Api.Controllers
         public ConversationController(IConversationService conversationService)
         {
             this.conversationService = conversationService;
+        }
+
+        [HttpGet("test")]
+        [Authorize]
+        public string test()
+        {
+            return "hi";
         }
 
         [HttpGet]
