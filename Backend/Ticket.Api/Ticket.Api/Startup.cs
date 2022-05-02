@@ -67,10 +67,10 @@ namespace Ticket.Api
             {
                 opt.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
                 {
-                    //ValidateIssuer = true,
-                    //ValidateAudience = true,
-                    //ValidAudience = "",
-                    //ValidIssuer = "",
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidAudience = "TicketingApp",
+                    ValidIssuer = "TicketingApp",
                     RequireExpirationTime = true,
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("this is mein custom Secret key for authentication")),
                     ValidateIssuerSigningKey = true

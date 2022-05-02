@@ -22,13 +22,6 @@ namespace Ticket.Api.Controllers
             this.conversationService = conversationService;
         }
 
-        [HttpGet("test")]
-        [Authorize]
-        public string test()
-        {
-            return "hi";
-        }
-
         [HttpGet]
         public IEnumerable<Conversation> Get()
         {

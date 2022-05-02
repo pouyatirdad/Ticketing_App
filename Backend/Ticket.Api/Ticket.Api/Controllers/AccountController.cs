@@ -78,6 +78,8 @@ namespace Ticket.Api.Controllers
 
                 var token = new JwtSecurityToken
                     (
+                        issuer: "TicketingApp",
+                        audience: "TicketingApp",
                         claims: claims,
                         expires: System.DateTime.Now.AddDays(30),
                         signingCredentials: new SigningCredentials(key, SecurityAlgorithms.HmacSha256)
