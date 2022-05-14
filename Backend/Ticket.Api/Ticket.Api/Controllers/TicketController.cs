@@ -4,6 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Ticket.Data.Enums;
+using Ticket.Data.ViewModel;
 using Ticket.Service.Service;
 
 namespace Ticket.Api.Controllers
@@ -37,14 +39,31 @@ namespace Ticket.Api.Controllers
             return findedReslut;
         }
         [HttpPost("Create")]
-        public bool Create(Ticket.Data.Model.Ticket model)
+        public bool Create(TicketViewModel model)
         {
-            return ticketService.Create(model);
+            var newModel = new Ticket.Data.Model.Ticket()
+            {
+                Title = model.Title,
+                Status = (int)StatusEnum.Ticket.New,
+                Description= model.Description,
+                isDeleted=false,
+                ConversationID=model.ConversationID,
+            };
+            return ticketService.Create(newModel);
         }
         [HttpPost("Edit")]
-        public bool Edit(Ticket.Data.Model.Ticket model)
+        public bool Edit(TicketViewModel model)
         {
-            return ticketService.Edit(model);
+            var newModel = new Ticket.Data.Model.Ticket()
+            {
+                ID= model.ID,
+                Title = model.Title,
+                Status = (int)StatusEnum.Ticket.New,
+                Description = model.Description,
+                isDeleted = false,
+                ConversationID = model.ConversationID,
+            };
+            return ticketService.Edit(newModel);
         }
         [HttpPost("Delete")]
         public bool Delete(int id)
