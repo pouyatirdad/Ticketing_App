@@ -13,12 +13,12 @@ function ConversationForm() {
 
     let addTicket = e => {
         e.preventDefault();
-        Api.post('/conversation/Create', {
+        Api.post('/conversation/create', {
             id: 0,
             title: State.Text,
-            status: null,
-            isDeleted: null
-        })
+            status: 0,
+            isDeleted: false
+        }, { headers: { "Content-Type": "application/json" } })
             .then(res => res.status === 200
                 ?
                 MainSetState({ Text: '' })

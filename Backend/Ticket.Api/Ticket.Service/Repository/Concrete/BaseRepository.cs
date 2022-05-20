@@ -73,7 +73,7 @@ namespace Ticket.Service.Repository.Concrete
 
         public void Save()
         {
-            throw new NotImplementedException();
+            context.SaveChanges();
         }
     }
 }
