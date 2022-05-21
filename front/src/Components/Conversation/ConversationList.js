@@ -23,6 +23,9 @@ function ConversationList() {
                 State.map(x =>
                     <div>
                         {x.title}
+                        <span>
+                            تیکتها
+                        </span>
                     </div>
                 )
             }
