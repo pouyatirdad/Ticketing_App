@@ -3,10 +3,20 @@ import Header from './Header';
 import './App.css';
 import ConversationList from './Conversation/ConversationList';
 import ConversationForm from './Conversation/ConversationForm';
+import { Route, Router, Switch } from 'react-router';
 
 const App = () => {
     return (
         <>
+            <Router>
+                <Switch>
+                    <Route path='/home' component={Home} />
+                    <Route path='/' exact component={About} />
+                    <Route path='/Cvr/:id' component={ConversationDetail} />
+                    <Route path='eror' component={Eror} />
+                    <Route path='' component={Eror} />
+                </Switch>
+            </Router>
             <Header />
             <div style={{ display: 'flex', justifyContent: 'space-around', textAlign: 'center' }}>
                 <div style={{ width: '80vw' }}>
