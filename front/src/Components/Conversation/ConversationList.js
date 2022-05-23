@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Api from './../../Api/Api';
+import { Link } from 'react-router-dom';
 
 function ConversationList() {
 
@@ -23,9 +24,9 @@ function ConversationList() {
                 State.map(x =>
                     <div>
                         {x.title}
-                        <span>
+                        <Link to={`/Cvr/${x.id}`} key={x.id}>
                             تیکتها
-                        </span>
+                        </Link>
                     </div>
                 )
             }
