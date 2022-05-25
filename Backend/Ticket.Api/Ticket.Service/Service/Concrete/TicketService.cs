@@ -22,7 +22,7 @@ namespace Ticket.Service.Service.Concrete
 
         public IEnumerable<Data.Model.Ticket> getWithConversationID(int id)
         {
-            return context.Tickets.Where(x => x.ID == id);
+            return context.Tickets.Where(x => x.ID == id).ToList();
         }
     }
 }

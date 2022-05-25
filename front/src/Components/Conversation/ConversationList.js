@@ -4,13 +4,25 @@ import { Link } from 'react-router-dom';
 
 function ConversationList() {
 
-    const [State, setState] = useState([])
+    const [State, setState] = useState({
+        data: [],
+        error: false,
+    })
+
+    let MainSetState = data => {
+        setState({ ...State, ...data });
+    }
+
+    let logFunc = e => {
+        console.log(`error : ${e}`);
+        MainSetState({ data: [...State.data], error: true });
+    }
 
     useEffect(() => {
 
         Api.get("/conversation/")
-            .then(x => setState(x.data))
-            .catch(err => console.log(`error : ${err}`));
+            .then(x => MainSetState({ data: [...State.data, x.data], error: false }))
+            .catch(err => logFunc(err));
 
     }, [])
 
@@ -21,14 +33,21 @@ function ConversationList() {
             </h4>
 
             {
-                State.map(x =>
-                    <div>
-                        {x.title}
-                        <Link to={`/Cvr/${x.id}`} key={x.id}>
-                            تیکتها
-                        </Link>
-                    </div>
+                State.data.map(x =>
+                    x.map(z =>
+
+                        <div>
+                            {z.title}
+                            <Link to={`/Cvr/${z.id}`} key={z.id}>
+                                تیکتها
+                            </Link>
+                        </div>
+                    )
                 )
+            }
+
+            {
+                State.error ? "WE Got Error" : ""
             }
         </div>
     )
