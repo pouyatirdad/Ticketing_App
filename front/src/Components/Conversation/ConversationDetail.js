@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router';
 import Api from './../../Api/Api';
 import TicketForm from './../Ticket/TicketForm';
+import TicketList from './../Ticket/TicketList';
 
 function ConversationDetail() {
     let params = useParams();
@@ -31,7 +32,7 @@ function ConversationDetail() {
     return (
         <>
             <TicketForm id={params.id} />
-            <div>ConversationDetail</div>
+            <TicketList id={params.id} data={State.data} />
         </>
     )
 }
