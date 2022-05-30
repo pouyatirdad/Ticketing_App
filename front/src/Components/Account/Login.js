@@ -18,8 +18,22 @@ function Login() {
         console.log(`error : ${e}`);
         MainSetState({ data: "", error: true });
     }
+    
+    /*  
+    
+    async let submitLogin = e => {
+        e.preventDefault();
 
+        await Api.post('/account/Login', {
+            email: State.data.email,
+            password: State.data.password
+        })
+            .then(x => console.log(x))
+            .catch(err => logFunc(err));
 
+    }
+
+    */
     let submitLogin = e => {
         e.preventDefault();
 
