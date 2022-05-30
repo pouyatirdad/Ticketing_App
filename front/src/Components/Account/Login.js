@@ -27,7 +27,7 @@ function Login() {
             email: State.data.email,
             password: State.data.password
         })
-            .then(x => console.log(x))
+            .then(x => localStorage.setItem('Key', JSON.stringify(x.data)))
             .catch(err => logFunc(err));
 
     }

@@ -27,7 +27,6 @@ namespace Ticket.Api.Controllers
         [HttpGet]
         public IEnumerable<Conversation> Get()
         {
-            var user = User;
             return conversationService.GetAll();
         }
         [HttpGet("Get/{id:int}")]

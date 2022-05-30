@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
+using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
@@ -69,10 +70,13 @@ namespace Ticket.Api.Controllers
                 {
                     string roleName = IsAdmin ? "Admin" : "User";
 
+                    await CreateRole(roleName);
+
                     var result2 = new IdentityResult();
 
                     if (model.UserName=="ImProgrammer" && model.Email=="Programmer@SiteOwner.pro")
                     {
+                        await CreateRole("Programmer");
                         result2 = await userManager.AddToRoleAsync(user, "Programmer");
                     }
                     else
@@ -136,6 +140,12 @@ namespace Ticket.Api.Controllers
             }
 
             return BadRequest("Some properties are not valid"); // Status code: 400
+        }
+        [HttpGet("AllUser")]
+        public List<IdentityUser> GetAllUser()
+        {
+            var users= userManager.Users;
+            return users.ToList();
         }
     }
 }
