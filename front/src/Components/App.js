@@ -3,6 +3,7 @@ import Header from './Header';
 import './App.css';
 import ConversationList from './Conversation/ConversationList';
 import ConversationForm from './Conversation/ConversationForm';
+import Alluser from './User/Alluser';
 
 const App = () => {
     return (
@@ -14,7 +15,7 @@ const App = () => {
                     <ConversationList />
                 </div>
                 <div style={{ width: '20vw', borderLeft: '1px solid #000' }}>
-                    this is right sidebar
+                    <Alluser />
                 </div>
             </div>
         </>

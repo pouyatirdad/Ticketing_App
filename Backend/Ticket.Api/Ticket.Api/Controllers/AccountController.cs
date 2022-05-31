@@ -142,10 +142,21 @@ namespace Ticket.Api.Controllers
             return BadRequest("Some properties are not valid"); // Status code: 400
         }
         [HttpGet("AllUser")]
-        public List<IdentityUser> GetAllUser()
+        public List<UserViewModel> GetAllUser()
         {
             var users= userManager.Users;
-            return users.ToList();
+            List<UserViewModel> Users=new List<UserViewModel>();
+
+            foreach (var user in users)
+            {
+                var newuser = new UserViewModel();
+                newuser.UserName = user.UserName;
+                newuser.Email = user.Email;
+
+                Users.Add(newuser);
+            }
+
+            return Users;
         }
     }
 }
