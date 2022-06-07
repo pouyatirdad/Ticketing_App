@@ -40,6 +40,7 @@ namespace Ticket.Api.Controllers
         {
             var newModel = new Conversation()
             {
+                ApplicationUserUserName= model.UserName,
                 Title = model.Title,
                 IsDeleted = false,
                 Status = (int)StatusEnum.Conversation.New,
@@ -55,6 +56,7 @@ namespace Ticket.Api.Controllers
                 Title = model.Title,
                 IsDeleted = model.IsDeleted,
                 Status = model.Status,
+                ApplicationUserUserName = model.UserName,
             };
             return conversationService.Edit(newModel);
         }

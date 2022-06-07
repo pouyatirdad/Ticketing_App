@@ -82,6 +82,10 @@ namespace Ticket.Data.Migrations
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Email")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
@@ -133,6 +137,8 @@ namespace Ticket.Data.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers");
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("IdentityUser");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
@@ -222,6 +228,12 @@ namespace Ticket.Data.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("ApplicationUserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ApplicationUserUserName")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
@@ -234,6 +246,8 @@ namespace Ticket.Data.Migrations
                         .HasColumnType("nvarchar(200)");
 
                     b.HasKey("ID");
+
+                    b.HasIndex("ApplicationUserId");
 
                     b.ToTable("Conversations");
                 });
@@ -268,6 +282,19 @@ namespace Ticket.Data.Migrations
                     b.HasIndex("ConversationID");
 
                     b.ToTable("Tickets");
+                });
+
+            modelBuilder.Entity("Ticket.Data.Model.ApplicationUser", b =>
+                {
+                    b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
+
+                    b.Property<string>("Family")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasDiscriminator().HasValue("ApplicationUser");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -321,6 +348,15 @@ namespace Ticket.Data.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Ticket.Data.Model.Conversation", b =>
+                {
+                    b.HasOne("Ticket.Data.Model.ApplicationUser", "ApplicationUser")
+                        .WithMany("conversations")
+                        .HasForeignKey("ApplicationUserId");
+
+                    b.Navigation("ApplicationUser");
+                });
+
             modelBuilder.Entity("Ticket.Data.Model.Ticket", b =>
                 {
                     b.HasOne("Ticket.Data.Model.Conversation", "Conversation")
@@ -335,6 +371,11 @@ namespace Ticket.Data.Migrations
             modelBuilder.Entity("Ticket.Data.Model.Conversation", b =>
                 {
                     b.Navigation("Tickets");
+                });
+
+            modelBuilder.Entity("Ticket.Data.Model.ApplicationUser", b =>
+                {
+                    b.Navigation("conversations");
                 });
 #pragma warning restore 612, 618
         }

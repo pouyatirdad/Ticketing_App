@@ -14,6 +14,8 @@ namespace Ticket.Data.Model
         public bool IsDeleted { get; set; } = false;
 
         public ICollection<Ticket> Tickets { get; set; }
+        public string ApplicationUserUserName { get; set; }
+        public ApplicationUser ApplicationUser { get; set; }
 
     }
 }

@@ -12,5 +12,6 @@ namespace Ticket.Data.Context
         }
         public DbSet<Ticket.Data.Model.Ticket> Tickets { get; set; }
         public DbSet<Conversation> Conversations { get; set; }
+        public DbSet<ApplicationUser> ApplicationUsers { get; set; }
     }
 }
