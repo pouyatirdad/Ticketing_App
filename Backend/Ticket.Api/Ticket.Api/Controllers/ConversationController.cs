@@ -38,9 +38,14 @@ namespace Ticket.Api.Controllers
         [HttpPost("Create")]
         public bool Create(ConversationViewModel model)
         {
+            var username = model.UserName;
+            if (username==null)
+            {
+                username = User.Identity.Name;
+            }
             var newModel = new Conversation()
             {
-                ApplicationUserUserName= model.UserName,
+                ApplicationUserUserName= username,
                 Title = model.Title,
                 IsDeleted = false,
                 Status = (int)StatusEnum.Conversation.New,
