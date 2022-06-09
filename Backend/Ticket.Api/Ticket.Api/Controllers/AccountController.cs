@@ -9,6 +9,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using Ticket.Data.Model;
 using Ticket.Data.ViewModel.Account;
 
 namespace Ticket.Api.Controllers
@@ -18,12 +19,12 @@ namespace Ticket.Api.Controllers
     [Route("[controller]")]
     public class AccountController : Controller
     {
-        private readonly UserManager<IdentityUser> userManager;
+        private readonly UserManager<ApplicationUser> userManager;
         private readonly RoleManager<IdentityRole> roleManager;
 
         public AccountController
             (
-            UserManager<IdentityUser> userManager,
+            UserManager<ApplicationUser> userManager,
             RoleManager<IdentityRole> roleManager
             )
         {
@@ -57,7 +58,7 @@ namespace Ticket.Api.Controllers
                 if (CheckUserExist != null)
                     return BadRequest("User Is Already Here!"); ;
 
-                var user = new IdentityUser()
+                var user = new ApplicationUser()
                 {
                     UserName = model.UserName,
                     Email = model.Email,
@@ -145,9 +146,10 @@ namespace Ticket.Api.Controllers
         public List<UserViewModel> GetAllUser()
         {
             var users= userManager.Users;
+
             List<UserViewModel> Users=new List<UserViewModel>();
 
-            foreach (var user in users)
+            foreach (var user in users.Where(x=>x.IsPublic == true))
             {
                 var newuser = new UserViewModel();
                 newuser.UserName = user.UserName;

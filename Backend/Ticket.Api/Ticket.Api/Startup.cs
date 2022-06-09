@@ -17,6 +17,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Ticket.Data.Context;
+using Ticket.Data.Model;
 using Ticket.Service.Repository;
 using Ticket.Service.Repository.Abstract;
 using Ticket.Service.Repository.Concrete;
@@ -55,7 +56,7 @@ namespace Ticket.Api
             services.AddDbContext<MyDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddIdentity<IdentityUser,IdentityRole>()
+            services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<MyDbContext>()
                 .AddDefaultTokenProviders();
 

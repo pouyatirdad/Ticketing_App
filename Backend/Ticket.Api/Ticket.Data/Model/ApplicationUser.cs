@@ -10,6 +10,7 @@ namespace Ticket.Data.Model
         public string Email { get; set; }
         public string Name { get; set; }
         public string Family { get; set; }
+        public bool IsPublic { get; set; }
 
         public ICollection<Conversation> conversations { get; set; }
     }
