@@ -12,6 +12,10 @@ namespace Ticket.Data.Model
         public string Title { get; set; }
         public int Status { get; set; } = (int)StatusEnum.Conversation.New;
         public bool IsDeleted { get; set; } = false;
+        [Required]
+        public int ToUserId { get; set; }
+        [Required]
+        public int FromUserId { get; set; }
 
         public ICollection<Ticket> Tickets { get; set; }
         public string ApplicationUserUserName { get; set; }

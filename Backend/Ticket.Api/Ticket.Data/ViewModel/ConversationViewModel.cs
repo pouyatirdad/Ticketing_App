@@ -16,5 +16,7 @@ namespace Ticket.Data.ViewModel
         public string Title { get; set; }
         public int Status { get; set; } = (int)StatusEnum.Conversation.New;
         public bool IsDeleted { get; set; } = false;
+        public int ToUserId { get; set; }
+        public int FromUserId { get; set; }
     }
 }

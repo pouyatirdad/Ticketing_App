@@ -43,12 +43,18 @@ namespace Ticket.Api.Controllers
             {
                 username = User.Identity.Name;
             }
+            if (model.FromUserId==0)
+            {
+                //model.FromUserId = User.Identity.id;
+            }
             var newModel = new Conversation()
             {
                 ApplicationUserUserName= username,
                 Title = model.Title,
                 IsDeleted = false,
                 Status = (int)StatusEnum.Conversation.New,
+                ToUserId=model.ToUserId,
+                FromUserId=model.FromUserId,
             };
             return conversationService.Create(newModel);
         }
