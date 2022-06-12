@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Ticket.Data.Model;
 using Ticket.Data.ViewModel.Account;
+using Ticket.Service.Service.Abstract;
 
 namespace Ticket.Api.Controllers
 {
@@ -19,17 +20,18 @@ namespace Ticket.Api.Controllers
     [Route("[controller]")]
     public class AccountController : Controller
     {
-        private readonly UserManager<ApplicationUser> userManager;
-        private readonly RoleManager<IdentityRole> roleManager;
+        //private readonly UserManager<ApplicationUser> userManager;
+        //private readonly RoleManager<IdentityRole> roleManager;
+        private readonly IAccountService accountService;
 
         public AccountController
             (
-            UserManager<ApplicationUser> userManager,
-            RoleManager<IdentityRole> roleManager
+            //UserManager<ApplicationUser> userManager,
+            //RoleManager<IdentityRole> roleManager
+            IAccountService accountService
             )
         {
-            this.userManager = userManager;
-            this.roleManager = roleManager;
+            this.accountService = accountService;
         }
 
         [HttpPost("CreateRole")]

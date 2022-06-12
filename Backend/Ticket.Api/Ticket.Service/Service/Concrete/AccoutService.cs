@@ -3,6 +3,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using System.Threading.Tasks;
 using Ticket.Data.Model;
 using Ticket.Data.ViewModel.Account;
 using Ticket.Service.Service.Abstract;
@@ -22,17 +23,29 @@ namespace Ticket.Service.Service.Concrete
             this.roleManager = roleManager;
         }
 
-        public async string Login(LoginViewModel model)
+        public async Task<ResponseViewModel> Login(LoginViewModel model)
         {
             var user = await userManager.FindByEmailAsync(model.Email);
 
             if (user == null)
-                return "Some properties are not valid";
+            {
+                return new ResponseViewModel()
+                {
+                    Message = "User Is Null",
+                    IsSuccess = false
+                };
+            }
 
             var result = await userManager.CheckPasswordAsync(user, model.Password);
 
             if (result == false)
-                return "Some properties are not valid";
+            {
+                return new ResponseViewModel()
+                {
+                    Message = "Property Is Not Valid",
+                    IsSuccess = false
+                };
+            }
 
             var userRoleName = await userManager.GetRolesAsync(user);
 
@@ -56,13 +69,17 @@ namespace Ticket.Service.Service.Concrete
 
             string tokenAsString = new JwtSecurityTokenHandler().WriteToken(token);
 
-            return tokenAsString;
+            return new ResponseViewModel()
+            {
+                Message = tokenAsString,
+                IsSuccess = true
+            };
         }
 
 
-        public bool Register(RegisterViewModel model)
+        public ResponseViewModel Register(RegisterViewModel model)
         {
-            return false;
+            return null;
         }
     }
 }
