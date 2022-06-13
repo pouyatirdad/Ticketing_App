@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
+using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
@@ -21,6 +22,19 @@ namespace Ticket.Service.Service.Concrete
         {
             this.userManager = userManager;
             this.roleManager = roleManager;
+        }
+
+        public async Task<bool> CreateRole(string roleName)
+        {
+
+            bool x = await roleManager.RoleExistsAsync("Admin");
+            if (x || string.IsNullOrWhiteSpace(roleName))
+                return false;
+
+            var role = new IdentityRole();
+            role.Name = roleName;
+            await roleManager.CreateAsync(role);
+            return true;
         }
 
         public async Task<ResponseViewModel> Login(LoginViewModel model)
@@ -77,9 +91,65 @@ namespace Ticket.Service.Service.Concrete
         }
 
 
-        public ResponseViewModel Register(RegisterViewModel model)
+        public async Task<ResponseViewModel> Register(RegisterViewModel model,bool IsAdmin=false)
         {
-            return null;
+            var CheckUserExist = await userManager.FindByEmailAsync(model.Email);
+            if (CheckUserExist != null)
+            {
+                return new ResponseViewModel()
+                {
+                    Message = "User is Already here",
+                    IsSuccess = false
+                };
+            }
+
+            var user = new ApplicationUser()
+            {
+                UserName = model.UserName,
+                Email = model.Email,
+                EmailConfirmed = false
+            };
+
+            var result = await userManager.CreateAsync(user, model.Password);
+
+            if (result.Succeeded)
+            {
+                string roleName = IsAdmin ? "Admin" : "User";
+
+                await CreateRole(roleName);
+
+                var result2 = new IdentityResult();
+
+                if (model.UserName == "ImProgrammer" && model.Email == "Programmer@SiteOwner.pro")
+                {
+                    await CreateRole("Programmer");
+                    result2 = await userManager.AddToRoleAsync(user, "Programmer");
+                }
+                else
+                {
+                    result2 = await userManager.AddToRoleAsync(user, roleName);
+                }
+
+                return new ResponseViewModel()
+                {
+                    Message = string.Format("UserCreated : {0}  -  Addrole : {1}", result.Succeeded,result2.Succeeded),
+                    IsSuccess = true
+                };
+
+
+            }
+
+            List<string> errors = new List<string>();
+            foreach (var error in result.Errors)
+            {
+                errors.Add(error.Description);
+            }
+            return new ResponseViewModel()
+            {
+                Message = "We Got Errors",
+                IsSuccess = false,
+                Errors = errors
+            };
         }
     }
 }

@@ -31,5 +31,19 @@ namespace TicketTest
             Assert.NotNull(result);
             Assert.Equal("login",result.Result.ToString(),ignoreCase:true);
         }
+        [Fact]
+        public void Register_UserData_True()
+        {
+            var data = new RegisterViewModel()
+            {
+                UserName = "TestUser",
+                Email = "Test@gmail.com",
+                Password = "Test@123",
+                RetypePassword="Test@123"
+            };
+            var result =(accountController.Register(data)as Task<IActionResult>) ;
+            Assert.NotNull(result);
+            Assert.Equal(,result.Result,ignoreCase:true);
+        }
     }
 }
