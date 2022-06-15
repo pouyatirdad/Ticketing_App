@@ -29,10 +29,10 @@ namespace TicketTest
             };
             var result = (accountController.Login(data) as Task<IActionResult>);
             Assert.NotNull(result);
-            Assert.Equal("login",result.Result.ToString(),ignoreCase:true);
+            Assert.Equal("toekn",result.Result.ToString(),ignoreCase:true);
         }
         [Fact]
-        public void Register_UserData_True()
+        public async Task Register_UserData_True()
         {
             var data = new RegisterViewModel()
             {
@@ -41,9 +41,9 @@ namespace TicketTest
                 Password = "Test@123",
                 RetypePassword="Test@123"
             };
-            var result =(accountController.Register(data)as Task<IActionResult>) ;
+            var result =(await accountController.Register(data) as ResponseViewModel) ;
             Assert.NotNull(result);
-            Assert.Equal(,result.Result,ignoreCase:true);
+            Assert.Equal("true",result.IsSuccess.ToString().ToLower(),ignoreCase:true);
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Moq;
 using System.Collections.Generic;
+using System.Linq;
 using Ticket.Api.Controllers;
 using Ticket.Service.Service;
 using Xunit;
@@ -26,7 +27,7 @@ namespace TicketTest
             //mockContext.Verify(x => x.SaveChanges(), Times.Exactly(1));
             
             //add result.count()
-            Assert.Equal("", result,ignoreCase:true);
+            Assert.Equal("3", result.Count().ToString(),ignoreCase:true);
         }
     }
 }

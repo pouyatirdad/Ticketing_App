@@ -91,7 +91,7 @@ namespace Ticket.Service.Service.Concrete
         }
 
 
-        public async Task<ResponseViewModel> Register(RegisterViewModel model,bool IsAdmin=false)
+        public async Task<ResponseViewModel> Register(RegisterViewModel model,bool IsAdmin)
         {
             var CheckUserExist = await userManager.FindByEmailAsync(model.Email);
             if (CheckUserExist != null)
