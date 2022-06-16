@@ -11,11 +11,11 @@ using Ticket.Service.Service.Abstract;
 
 namespace Ticket.Service.Service.Concrete
 {
-    public class AccoutService : IAccountService
+    public class AccountService : IAccountService
     {
         private readonly UserManager<ApplicationUser> userManager;
         private readonly RoleManager<IdentityRole> roleManager;
-        public AccoutService(
+        public AccountService(
             UserManager<ApplicationUser> userManager,
             RoleManager<IdentityRole> roleManager
             )
@@ -91,65 +91,78 @@ namespace Ticket.Service.Service.Concrete
         }
 
 
-        public async Task<ResponseViewModel> Register(RegisterViewModel model,bool IsAdmin)
+        public async Task<ResponseViewModel> Register(RegisterViewModel model, bool IsAdmin)
         {
-            var CheckUserExist = await userManager.FindByEmailAsync(model.Email);
-            if (CheckUserExist != null)
+            try
+            {
+                var CheckUserExist = await userManager.FindByEmailAsync(model.Email);
+                if (CheckUserExist != null)
+                {
+                    return new ResponseViewModel()
+                    {
+                        Message = "User is Already here",
+                        IsSuccess = false
+                    };
+                }
+
+                var user = new ApplicationUser()
+                {
+                    UserName = model.UserName,
+                    Email = model.Email,
+                    EmailConfirmed = false,
+                    IsPublic=true,
+                };
+
+                var result = await userManager.CreateAsync(user, model.Password);
+
+                if (result.Succeeded)
+                {
+                    string roleName = IsAdmin ? "Admin" : "User";
+
+                    await CreateRole(roleName);
+
+                    var result2 = new IdentityResult();
+
+                    if (model.UserName == "ImProgrammer" && model.Email == "Programmer@SiteOwner.pro")
+                    {
+                        await CreateRole("Programmer");
+                        result2 = await userManager.AddToRoleAsync(user, "Programmer");
+                    }
+                    else
+                    {
+                        result2 = await userManager.AddToRoleAsync(user, roleName);
+                    }
+
+                    return new ResponseViewModel()
+                    {
+                        Message = string.Format("UserCreated : {0}  -  Addrole : {1}", result.Succeeded, result2.Succeeded),
+                        IsSuccess = true
+                    };
+
+                }
+                List<string> errors = new List<string>();
+                foreach (var error in result.Errors)
+                {
+                    errors.Add(error.Description);
+                }
+
+                return new ResponseViewModel()
+                {
+                    Message = "We Got Errors",
+                    IsSuccess = false,
+                    Errors = errors
+                };
+            }
+            catch (System.Exception ex)
             {
                 return new ResponseViewModel()
                 {
-                    Message = "User is Already here",
-                    IsSuccess = false
+                    Message = "We Got Errors",
+                    IsSuccess = false,
+                    Errors = new List<string> { ex.Message }
                 };
             }
 
-            var user = new ApplicationUser()
-            {
-                UserName = model.UserName,
-                Email = model.Email,
-                EmailConfirmed = false
-            };
-
-            var result = await userManager.CreateAsync(user, model.Password);
-
-            if (result.Succeeded)
-            {
-                string roleName = IsAdmin ? "Admin" : "User";
-
-                await CreateRole(roleName);
-
-                var result2 = new IdentityResult();
-
-                if (model.UserName == "ImProgrammer" && model.Email == "Programmer@SiteOwner.pro")
-                {
-                    await CreateRole("Programmer");
-                    result2 = await userManager.AddToRoleAsync(user, "Programmer");
-                }
-                else
-                {
-                    result2 = await userManager.AddToRoleAsync(user, roleName);
-                }
-
-                return new ResponseViewModel()
-                {
-                    Message = string.Format("UserCreated : {0}  -  Addrole : {1}", result.Succeeded,result2.Succeeded),
-                    IsSuccess = true
-                };
-
-
-            }
-
-            List<string> errors = new List<string>();
-            foreach (var error in result.Errors)
-            {
-                errors.Add(error.Description);
-            }
-            return new ResponseViewModel()
-            {
-                Message = "We Got Errors",
-                IsSuccess = false,
-                Errors = errors
-            };
         }
     }
 }

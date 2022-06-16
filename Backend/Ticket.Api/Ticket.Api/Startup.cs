@@ -81,6 +81,7 @@ namespace Ticket.Api
             services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
             services.AddScoped<ITicketService, TicketService>();
             services.AddScoped<IConversationService, ConversationService>();
+            services.AddScoped<IAccountService, AccountService>();
 
         }
 
