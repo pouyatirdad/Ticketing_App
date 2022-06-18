@@ -29,5 +29,20 @@ namespace TicketTest
             //add result.count()
             Assert.Equal("3", result.Count().ToString(),ignoreCase:true);
         }
+        [Fact]
+        public void Create_CorrectData_ReturnTrue()
+        {
+            var data = new Ticket.Data.ViewModel.TicketViewModel()
+            {
+                ConversationID = 1,
+                Description = "test",
+                ID = 1,
+                isDeleted = false,
+                Status = 1,
+                Title ="teset"
+            };
+            var result = ticketController.Create(data);
+            Assert.True(result);
+        }
     }
 }
