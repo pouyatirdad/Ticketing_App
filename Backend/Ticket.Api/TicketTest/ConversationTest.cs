@@ -19,6 +19,7 @@ namespace TicketTest
         [Fact]
         public void Create_GiveData_ReturnTrue()
         {
+            //arrange
             var data = new ConversationViewModel()
             {
                 FromUserId = 1,
@@ -29,7 +30,12 @@ namespace TicketTest
                 Title = "this is test",
                 UserName = "testing user name"
             };
+            
+            service.setup(x=>x.create(data),return true);
+            // act
             var result = (controller.Create(data));
+            //asert
+            service.verify(x=>x.create,Times.Once);
             Assert.True(result);
         }
     }
