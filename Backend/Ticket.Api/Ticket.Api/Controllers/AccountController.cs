@@ -113,21 +113,8 @@ namespace Ticket.Api.Controllers
         [HttpGet("AllUser")]
         public List<UserViewModel> GetAllUser()
         {
-            //var users= userManager.Users;
-
-            //List<UserViewModel> Users=new List<UserViewModel>();
-
-            //foreach (var user in users.Where(x=>x.IsPublic == true))
-            //{
-            //    var newuser = new UserViewModel();
-            //    newuser.UserName = user.UserName;
-            //    newuser.Email = user.Email;
-
-            //    Users.Add(newuser);
-            //}
-
-            //return Users;
-            return null;
+            var users = accountService.GetAllUser();
+            return users;
         }
     }
 }

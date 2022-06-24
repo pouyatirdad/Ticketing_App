@@ -2,6 +2,7 @@
 using Microsoft.IdentityModel.Tokens;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
+using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
@@ -35,6 +36,24 @@ namespace Ticket.Service.Service.Concrete
             role.Name = roleName;
             await roleManager.CreateAsync(role);
             return true;
+        }
+
+        public List<UserViewModel> GetAllUser()
+        {
+            var users = userManager.Users;
+
+            List<UserViewModel> Users = new List<UserViewModel>();
+
+            foreach (var user in users.Where(x => x.IsPublic == true))
+            {
+                var newuser = new UserViewModel();
+                newuser.UserName = user.UserName;
+                newuser.Email = user.Email;
+
+                Users.Add(newuser);
+            }
+
+            return Users;
         }
 
         public async Task<ResponseViewModel> Login(LoginViewModel model)

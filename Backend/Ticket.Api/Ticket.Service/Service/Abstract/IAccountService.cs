@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using Ticket.Data.ViewModel.Account;
 
 namespace Ticket.Service.Service.Abstract
@@ -8,5 +9,6 @@ namespace Ticket.Service.Service.Abstract
         public Task<ResponseViewModel> Login(LoginViewModel model);
         public Task<ResponseViewModel> Register(RegisterViewModel model,bool IsAdmin);
         public Task<bool> CreateRole(string roleName);
+        public List<UserViewModel> GetAllUser();
     }
 }
