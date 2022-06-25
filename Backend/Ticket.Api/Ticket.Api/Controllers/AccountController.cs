@@ -68,7 +68,7 @@ namespace Ticket.Api.Controllers
             };
         }
         [HttpPost("login")]
-        public async Task<IActionResult> Login(LoginViewModel model)
+        public async Task<ResponseViewModel> Login(LoginViewModel model)
         {
 
             //if (ModelState.IsValid)
@@ -108,7 +108,16 @@ namespace Ticket.Api.Controllers
             //    return Ok(tokenAsString);
             //}
 
-            return BadRequest("Some properties are not valid"); // Status code: 400
+            if (ModelState.IsValid)
+            {
+                return await accountService.Login(model);
+            }
+
+
+            return new ResponseViewModel(){
+                IsSuccess=false,
+                Message= "Some properties are not valid"
+            };
         }
         [HttpGet("AllUser")]
         public List<UserViewModel> GetAllUser()
