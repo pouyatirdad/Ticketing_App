@@ -20,14 +20,10 @@ namespace Ticket.Api.Controllers
     [Route("[controller]")]
     public class AccountController : Controller
     {
-        //private readonly UserManager<ApplicationUser> userManager;
-        //private readonly RoleManager<IdentityRole> roleManager;
         private readonly IAccountService accountService;
 
         public AccountController
             (
-            //UserManager<ApplicationUser> userManager,
-            //RoleManager<IdentityRole> roleManager
             IAccountService accountService
             )
         {
@@ -36,19 +32,9 @@ namespace Ticket.Api.Controllers
 
         [HttpPost("CreateRole")]
         [Authorize(Roles = "Programmer")]
-        public async Task<IActionResult> CreateRole(string roleName)
+        public async Task<bool> CreateRole(string roleName)
         {
-
-            //bool x = await roleManager.RoleExistsAsync("Admin");
-            //if (x || string.IsNullOrWhiteSpace(roleName))
-            //    return BadRequest("Error!");
-
-            //var role = new IdentityRole();
-            //role.Name = roleName;
-            //await roleManager.CreateAsync(role);
-            //return Ok(string.Format("Role {0} Created",roleName));
-            return null;
-
+            return await accountService.CreateRole(roleName);
         }
 
         [HttpPost("register")]
@@ -70,49 +56,10 @@ namespace Ticket.Api.Controllers
         [HttpPost("login")]
         public async Task<ResponseViewModel> Login(LoginViewModel model)
         {
-
-            //if (ModelState.IsValid)
-            //{
-            //    var user = await userManager.FindByEmailAsync(model.Email);
-
-            //    if (user == null)
-            //        return BadRequest("Some properties are not valid");
-
-            //    var result = await userManager.CheckPasswordAsync(user, model.Password);
-
-            //    if (result == false)
-            //        return BadRequest("Some properties are not valid");
-
-            //    var userRoleName = await userManager.GetRolesAsync(user);
-
-            //    var claims = new[]
-            //        {
-            //            new Claim(ClaimTypes.Email,model.Email),
-            //            new Claim(ClaimTypes.NameIdentifier,user.Id),
-            //            new Claim(ClaimTypes.Role,userRoleName[0])
-            //        };
-
-            //    var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("this is mein custom Secret key for authentication"));
-
-            //    var token = new JwtSecurityToken
-            //        (
-            //            issuer: "TicketingApp",
-            //            audience: "TicketingApp",
-            //            claims: claims,
-            //            expires: System.DateTime.Now.AddDays(30),
-            //            signingCredentials: new SigningCredentials(key, SecurityAlgorithms.HmacSha256)
-            //        );
-
-            //    string tokenAsString = new JwtSecurityTokenHandler().WriteToken(token);
-
-            //    return Ok(tokenAsString);
-            //}
-
             if (ModelState.IsValid)
             {
                 return await accountService.Login(model);
             }
-
 
             return new ResponseViewModel(){
                 IsSuccess=false,

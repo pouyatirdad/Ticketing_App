@@ -27,7 +27,7 @@ namespace TicketTest
                 Email = "test@gmail.com",
                 Password = "Test@123"
             };
-            var result = (accountController.Login(data) as Task<IActionResult>);
+            var result = (accountController.Login(data) as Task<ResponseViewModel>);
             Assert.NotNull(result);
             Assert.Equal("toekn",result.Result.ToString(),ignoreCase:true);
         }

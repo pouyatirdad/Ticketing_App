@@ -32,6 +32,16 @@ namespace TicketTest
         [Fact]
         public void Create_CorrectData_ReturnTrue()
         {
+            var ServiceData=new Ticket.Data.Model.Ticket()
+            {
+                ConversationID = 1,
+                Description ="test",
+                ID = 1,
+                isDeleted = false,
+                Status=1,
+                Title="test",
+            };
+
             var data = new Ticket.Data.ViewModel.TicketViewModel()
             {
                 ConversationID = 1,
@@ -39,9 +49,12 @@ namespace TicketTest
                 ID = 1,
                 isDeleted = false,
                 Status = 1,
-                Title = "teset"
+                Title = "test",
             };
+            //ticketService.Setup(x=>x.Create(ServiceData),true);
             var result = ticketController.Create(data);
+            ticketService.Verify(x => x.Create(ServiceData), Times.Once());
+
             Assert.True(result);
         }
         [Fact]
