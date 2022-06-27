@@ -152,3 +152,4 @@ C:\Users\pouya\OneDrive\Desktop\Ticketing_App\Backend\Ticket.Api\TicketTest\obj\
 C:\Users\pouya\OneDrive\Desktop\Ticketing_App\Backend\Ticket.Api\TicketTest\obj\Debug\net5.0\TicketTest.pdb
 C:\Users\pouya\OneDrive\Desktop\Ticketing_App\Backend\Ticket.Api\TicketTest\obj\Debug\net5.0\TicketTest.genruntimeconfig.cache
 C:\Users\pouya\OneDrive\Desktop\Ticketing_App\Backend\Ticket.Api\TicketTest\obj\Debug\net5.0\ref\TicketTest.dll
+C:\Users\pouya\OneDrive\Desktop\Ticketing_App\Backend\Ticket.Api\TicketTest\bin\Debug\net5.0\FluentAssertions.dll

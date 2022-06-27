@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "ROzGbX6JdoqZKt37BiTTxqgnYVDkcTth2muHG9lyLePgbqZ/5FpPcmEhaZ7HRmiOSsL/xDEkPf3PxWXH47x0NQ==",
+  "dgSpecHash": "CP5ZEbNQDatFRxbBcoLqdS+ZVSPzZE0WNGLb5Axf/jZgaUlPMjxCRs1TCucujfnrKpzUPpxxZnICPc0QV/QLFQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\pouya\\OneDrive\\Desktop\\Ticketing_App\\Backend\\Ticket.Api\\TicketTest\\TicketTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pouya\\.nuget\\packages\\castle.core\\5.0.0\\castle.core.5.0.0.nupkg.sha512",
     "C:\\Users\\pouya\\.nuget\\packages\\coverlet.collector\\3.0.2\\coverlet.collector.3.0.2.nupkg.sha512",
+    "C:\\Users\\pouya\\.nuget\\packages\\fluentassertions\\6.7.0\\fluentassertions.6.7.0.nupkg.sha512",
     "C:\\Users\\pouya\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.16\\microsoft.aspnetcore.authentication.jwtbearer.5.0.16.nupkg.sha512",
     "C:\\Users\\pouya\\.nuget\\packages\\microsoft.aspnetcore.cors\\2.2.0\\microsoft.aspnetcore.cors.2.2.0.nupkg.sha512",
     "C:\\Users\\pouya\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.16\\microsoft.aspnetcore.cryptography.internal.5.0.16.nupkg.sha512",
