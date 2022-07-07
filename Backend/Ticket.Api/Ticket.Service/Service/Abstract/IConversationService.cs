@@ -11,6 +11,5 @@ namespace Ticket.Service.Service.Abstract
 {
     public interface IConversationService:IBaseRepository<Conversation>
     {
-        public bool CreateConversation(ConversationViewModel model);
     }
 }
