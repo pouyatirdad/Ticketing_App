@@ -82,6 +82,7 @@ namespace Ticket.Api
             services.AddScoped<ITicketService, TicketService>();
             services.AddScoped<IConversationService, ConversationService>();
             services.AddScoped<IAccountService, AccountService>();
+            services.AddAutoMapper(typeof(Startup));
 
         }
 
