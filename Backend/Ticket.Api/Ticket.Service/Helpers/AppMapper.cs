@@ -9,6 +9,7 @@ namespace Ticket.Service.Helpers
         public AppMapper()
         {
             CreateMap<ConversationViewModel,Conversation>();
+            CreateMap<Conversation,ConversationViewModel>();
             CreateMap<TicketViewModel, Data.Model.Ticket>();
         }
     }

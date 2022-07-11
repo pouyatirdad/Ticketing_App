@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Ticket.Service.Repository.Abstract
 {
-    public interface IBaseRepository<T> where T : class
+    public interface IBaseRepository<T> where T : class,new()
     {
         IEnumerable<T> GetAll();
         T GetById(int id);
-        bool Create(T model);
+        bool Create<dto>(dto model);
         bool Edit(T model);
         bool Delete(T model);
         bool Delete(int id);

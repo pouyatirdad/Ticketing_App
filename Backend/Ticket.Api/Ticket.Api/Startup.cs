@@ -1,3 +1,4 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -18,6 +19,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Ticket.Data.Context;
 using Ticket.Data.Model;
+using Ticket.Service.Helpers;
 using Ticket.Service.Repository;
 using Ticket.Service.Repository.Abstract;
 using Ticket.Service.Repository.Concrete;
@@ -82,7 +84,16 @@ namespace Ticket.Api
             services.AddScoped<ITicketService, TicketService>();
             services.AddScoped<IConversationService, ConversationService>();
             services.AddScoped<IAccountService, AccountService>();
-            services.AddAutoMapper(typeof(Startup));
+
+            var mapperConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new AppMapper());
+            });
+
+            IMapper mapper = mapperConfig.CreateMapper();
+            services.AddSingleton(mapper);
+
+            services.AddMvc();
 
         }
 

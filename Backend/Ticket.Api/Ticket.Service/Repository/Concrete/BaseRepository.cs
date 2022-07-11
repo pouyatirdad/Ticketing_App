@@ -2,22 +2,26 @@
 using System.Collections.Generic;
 using System.Linq;
 using Ticket.Data.Context;
+using Ticket.Service.Helpers;
 using Ticket.Service.Repository.Abstract;
 
 namespace Ticket.Service.Repository.Concrete
 {
-    public class BaseRepository<T> : IBaseRepository<T> where T : class
+    public class BaseRepository<T> : IBaseRepository<T> where T : class,new()
     {
         private readonly MyDbContext context;
-        public BaseRepository(MyDbContext context)
+        private readonly AppMapper Mapper;
+        public BaseRepository(MyDbContext context, AppMapper Mapper)
         {
             this.context = context;
+            this.Mapper=Mapper;
         }
-        public bool Create(T model)
+        public bool Create<dto>(dto model)
         {
             try
             {
-                context.Set<T>().Add(model);
+                T entity = Mapper.CreateMap(model,new T());
+                context.Set<T>().Add(entity);
                 Save();
                 return true;
             }
